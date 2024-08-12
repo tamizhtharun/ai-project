@@ -77,4 +77,3 @@ const marquee = document.getElementById('marquee');
         marquee.innerHTML = text;
       })
       .catch(error => console.error('Error loading text:', error));
-
