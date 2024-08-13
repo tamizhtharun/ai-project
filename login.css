@@ -307,6 +307,7 @@ section a{
     align-items: flex-start; 
     }
 .quote-container{
+  margin-bottom: 10px;
   bottom: 0px;
   margin-top: -200px;
   justify-content: center;
@@ -358,4 +359,5 @@ section a{
           transform: scale(1);
         }
       }
+/* Product categories */
 
