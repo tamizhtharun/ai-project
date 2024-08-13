@@ -6,10 +6,13 @@
     font-family: 'Poppins',sans-serif;
 }
 body{
+    /* padding-right: -100px; */
+    /* position: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
     background: #dfdfdf;
 }
 #nav-bar-head{
@@ -317,6 +320,7 @@ section a{
   position: relative;
   width: 100%;
   display: flex;
+  user-select: none;
 }
 .quote-bold{
         color: rgb(0, 0, 0);
@@ -361,10 +365,17 @@ section a{
       }
 /* Product categories */
 .product-categories{
+  /* background-color: #000; */
+  /* width: 100%; */
+  height: 170px;
   display: flex;
   /* flex-direction: row; */
   position: absolute;
   margin-top: 150px;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  user-select: none;
 }
   .product-category{
     margin: 30px;
@@ -372,6 +383,7 @@ section a{
     /* padding: 35px; */
     /* align-items: center; */
     text-align: center;
+    user-select: none;
   }
   .product-category:hover {
     transform: scale(1.1);
@@ -391,3 +403,23 @@ section a{
     margin-top: 20px;
     margin-bottom: -20px;
   }
+
+
+  /* footer */
+  footer {
+    position: absolute; /* change from fixed to relative */
+    top: 1000px;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    clear: both; /* add clear:both to make sure the footer clears any floating elements */
+  }
+
+.testdiv{
+  margin-top: 500px;
+  /* bottom: 0; */
+  /* margin-bottom:1000px; */
+  background-color: blueviolet;
+  position: absolute;
+}
