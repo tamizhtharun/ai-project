@@ -249,6 +249,16 @@ section a{
     font-weight: 600;
 }
 
+.back-to-login-link{
+  text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.back-to-login-link a{
+  color: #000;
+    font-weight: 600;
+}
+
 .sign-in-link{
     text-align: center;
     font-size: 15px;

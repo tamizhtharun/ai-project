@@ -2,8 +2,11 @@
 const modal = document.getElementById('staticBackdrop');
 const signinForm = document.getElementById('signin-form');
 const signupForm = document.getElementById('signup-form');
+const passwordResetForm = document.getElementById('reset-form');
 const signupLink = document.getElementById('signup-link');
 const signinLink = document.getElementById('signin-link');
+const forgotPasswordLink = document.getElementById('forgot-password-link');
+const backToLoginLink = document.getElementById('back-to-login-link');
 
 // Add event listeners to the links
 signupLink.addEventListener('click', () => {
@@ -14,6 +17,16 @@ signupLink.addEventListener('click', () => {
 signinLink.addEventListener('click', () => {
   signinForm.style.display = 'block';
   signupForm.style.display = 'none';
+});
+
+forgotPasswordLink.addEventListener('click', () => {
+  signinForm.style.display = 'none';
+  passwordResetForm.style.display = 'block';
+});
+
+backToLoginLink.addEventListener('click', () => {
+  signinForm.style.display = 'block';
+  passwordResetForm.style.display = 'none';
 });
 
 

@@ -56,7 +56,7 @@
     <marquee id="marquee" onmouseover="this.stop();" onmouseout="this.start();">
     </marquee>
   </div>
-
+  
 
 
   <!-- modal -->
@@ -82,7 +82,7 @@
                 required>
 
             </div>
-            <div class="forgot">
+            <div class="forgot" id="forgot-password-link">
               <!-- <section>
                 <input type="checkbox" id="check">
                 <label for="check">Remember me</label>
@@ -100,6 +100,25 @@
               <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
             </div>
           </form>
+
+
+          <!-- Password Reset Form -->
+        <form id="reset-form" method="POST" action="" style="display: none;">
+          <h1 class="modal-title fs-5" id="box-header">Reset Password</h1>
+          <div class="input-box">
+            <input type="email" id="reset-email" class="input-field" placeholder="Email" name="email" autocomplete="off"
+              required>
+            <p id="reset-email-error"></p>
+          </div>
+          <div class="input-submit">
+            <button class="submit-btn" id="reset-submit" name="reset">
+              <label for="reset-submit">Reset Password</label>
+            </button>
+          </div>
+          <div class="back-to-login-link">
+            <p>Back to <a href="#" id="back-to-login-link">Login</a></p>
+          </div>
+        </form>
 
 
           <!-- Sign Up Form -->
