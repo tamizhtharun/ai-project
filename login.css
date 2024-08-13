@@ -19,7 +19,7 @@ body{
     top: 0px;
     /* margin-top: 10px; */
     height: 90px;
-    position: absolute;
+    position: fixed;
 }
 
 
@@ -306,7 +306,7 @@ section a{
 
 .runningtxt{
     background-color: rgb(238, 238, 238);
-    position: absolute;
+    position: fixed;
     top: 0px; 
     margin-top: 87px;
     left: 0;
