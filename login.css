@@ -360,4 +360,34 @@ section a{
         }
       }
 /* Product categories */
+.product-categories{
+  display: flex;
+  /* flex-direction: row; */
+  position: absolute;
+  margin-top: 150px;
+}
+  .product-category{
+    margin: 30px;
+    margin-bottom: 10px;
+    /* padding: 35px; */
+    /* align-items: center; */
+    text-align: center;
+  }
+  .product-category:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
 
+
+  .category{
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  .cat-electronics{
+    margin-bottom: -10px;
+    margin-top: 10px;
+  }
+  .cat-furniture{
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
