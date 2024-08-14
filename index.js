@@ -30,6 +30,15 @@ backToLoginLink.addEventListener('click', () => {
 });
 
 
+
+//seller modal
+const sellerBtn = document.getElementById('seller-btn');
+const sellerRegistrationModal = new bootstrap.Modal(document.getElementById('seller-registration-modal'));
+
+sellerBtn.addEventListener('click', () => {
+  sellerRegistrationModal.show();
+});
+
 //phone number check at signup
 const phoneNumberInput = document.getElementById('phone-number');
 const errorMessageElement = document.getElementById('error-message');
@@ -92,6 +101,7 @@ const marquee = document.getElementById('marquee');
       .catch(error => console.error('Error loading text:', error));
 
 //strong password
+//signup form
 const passwordInput = document.getElementById('password');
     const passwordError = document.getElementById('password-error');
 
@@ -127,3 +137,74 @@ const passwordInput = document.getElementById('password');
             passwordError.innerHTML = 'Strong password!';
         }
     });
+  //seller registration form
+  const sellerPasswordInput = document.getElementById('seller-password');
+const sellerPasswordError = document.getElementById('seller-password-error');
+
+sellerPasswordInput.addEventListener('input', () => {
+  const password = sellerPasswordInput.value;
+  let errorMessage = '';
+
+  if (password.length < 8) {
+    errorMessage += '<br>- Password should be at least 8 characters long.';
+  }
+
+  if (!/[a-z]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one lowercase letter.';
+  }
+
+  if (!/[A-Z]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one uppercase letter.';
+  }
+
+  if (!/[0-9]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one number.';
+  }
+
+  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one special character.';
+  }
+
+  if (errorMessage) {
+    sellerPasswordError.style.color = 'red';
+    sellerPasswordError.innerHTML = errorMessage;
+  } else {
+    sellerPasswordError.style.color = 'green';
+    sellerPasswordError.innerHTML = 'Strong password!';
+  }
+});
+
+//seller valid email
+//seller valid email
+const sellerInputemail = document.getElementById('seller-email');
+const selleremailerror = document.getElementById('sellerEmailError');
+
+sellerInputemail.addEventListener('input', () => {
+  const selleremail = sellerInputemail.value;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!emailRegex.test(selleremail)) {
+    selleremailerror.textContent = 'Invalid email address';
+    selleremailerror.style.color = 'red';
+  } else {
+    selleremailerror.textContent = '';
+  }
+});
+sellerInputemail.style.marginBottom = '1px'
+
+//seller valid phone
+const SellerPhone = document.getElementById('seller-phone');
+const sellerphoneError = document.getElementById('sellerphoneError');
+
+SellerPhone.addEventListener('input', () => {
+  const sellerphoneNumber = SellerPhone.value;
+  const phoneRegex = /^[0-9]{10}$/;
+
+  if (!phoneRegex.test(sellerphoneNumber)) {
+    sellerphoneError.textContent = 'Invalid phone number';
+    sellerphoneError.style.color = 'red';
+  } else {
+    sellerphoneError.textContent = '';
+  }
+});
+SellerPhone.style.marginBottom = '1px';

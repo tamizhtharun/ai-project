@@ -436,10 +436,12 @@ section a{
 
 .contact{
   margin-left: 12px;
+  font-size: smaller;
 }
 
 #email-error {
   margin-left: 20px;
+  font-size: smaller;
 }
 #password-error{
   font-size: smaller;
@@ -449,7 +451,22 @@ section a{
 
 #email-error-message{
   margin-left: 20px;
+  font-size: smaller;
 }
 #error-message{
   margin-left: 20px;
+  font-size: smaller;
+}
+#sellerEmailError{
+  margin-left: 20px;
+  font-size: smaller;
+}
+#seller-password-error{
+  margin-left: 20px;
+  font-size: smaller;
+  margin-top: -15px;
+}
+#sellerphoneError{
+  margin-left: 20px;
+  font-size: smaller;
 }
