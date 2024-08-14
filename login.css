@@ -19,7 +19,7 @@ body{
     top: 0px;
     /* margin-top: 10px; */
     height: 90px;
-    position: absolute;
+    position: fixed;
 }
 
 
@@ -43,7 +43,7 @@ body{
 
 }
 .search-container {
-  margin-left: 100px;
+  margin-left: 225px;
   top: 2px;
   left: 0px;
     position: relative; 
@@ -249,6 +249,16 @@ section a{
     font-weight: 600;
 }
 
+.back-to-login-link{
+  text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.back-to-login-link a{
+  color: #000;
+    font-weight: 600;
+}
+
 .sign-in-link{
     text-align: center;
     font-size: 15px;
@@ -296,7 +306,7 @@ section a{
 
 .runningtxt{
     background-color: rgb(238, 238, 238);
-    position: absolute;
+    position: fixed;
     top: 0px; 
     margin-top: 87px;
     left: 0;
@@ -424,3 +434,39 @@ section a{
   position: absolute;
 }
 
+.contact{
+  margin-left: 12px;
+  font-size: smaller;
+}
+
+#email-error {
+  margin-left: 20px;
+  font-size: smaller;
+}
+#password-error{
+  font-size: smaller;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+
+#email-error-message{
+  margin-left: 20px;
+  font-size: smaller;
+}
+#error-message{
+  margin-left: 20px;
+  font-size: smaller;
+}
+#sellerEmailError{
+  margin-left: 20px;
+  font-size: smaller;
+}
+#seller-password-error{
+  margin-left: 20px;
+  font-size: smaller;
+  margin-top: -15px;
+}
+#sellerphoneError{
+  margin-left: 20px;
+  font-size: smaller;
+}
