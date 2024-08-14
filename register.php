@@ -12,12 +12,19 @@ if (isset($_POST['register'])) {
     $query = "SELECT * FROM users WHERE email = '$email'";
     $result = $connection->query($query);
     if ($result->num_rows > 0) {
-        echo json_encode(['error' => 'Email already exists. Please login.']);
+        echo '<script>
+        alert("error => Email already exists. Please login.");
+         window.location.href ="index.html";  
+        </script>';
+
     } else {
         // Insert into database
         $query = "INSERT INTO users (username, email, phone_number, password) VALUES ('$username', '$email', '$phone_number', '$password')";
         if ($connection->query($query) === TRUE) {
-            echo json_encode(['success' => 'Registered successfully. Please login.']);
+            echo '<script>
+            alert("success => Registered successfully.");
+             window.location.href ="index.html";  
+        </script>';
         } else {
             echo json_encode(['error' => 'Error: ' . $connection->error]);
         }

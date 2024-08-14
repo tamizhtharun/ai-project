@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="login.css">
-  <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Ai Consultancy</title>
@@ -18,7 +17,7 @@
       <a class="navbar-brand" href="#">
         <img src="./icons/Hadezign-Hobbies-Photography.ico" alt="Logo" width="30" height="30"
           class="d-inline-block align-text-top">
-        Namma Brand
+        Dead Stock
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +39,7 @@
             <button id="seller-btn" type="button" class="signup-btn btn btn-outline-secondary">
               Sell here!
             </button>
-            <button type="button" class="login-btn btn btn-outline-secondary"
+            <button type="button" id="login-btn" class="login-btn btn btn-outline-secondary"
               data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               Login
             </button>
@@ -163,18 +162,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">Ai consultancy</h1>
-        <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" id="btn-close" class="seller-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="modal-body" class="modal-body">
         <!-- Seller registration form -->
-        <form id="seller-registration-form" method="POST" action="seller_registration.php" style="display: block;">
+        <form id="seller-form" method="POST" action="seller_registration.php" >
           <h1 class="modal-title fs-5" id="box-header">Seller Registration</h1>
           <div class="input-box">
             <input type="text" id="seller-name" class="input-field" placeholder="Seller Name" name="seller_name" required>
           </div>
 
           <div class="input-box">
-            <input type="text" id="address" class="input-field" placeholder="Address" name="seller_name" required>
+            <input type="text" id="address" class="input-field" placeholder="Address" name="seller_address" required>
           </div>
 
           <div class="input-box">

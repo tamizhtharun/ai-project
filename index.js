@@ -1,5 +1,6 @@
 
 const modal = document.getElementById('staticBackdrop');
+const loginbtn = document.getElementById('login-btn')
 const signinForm = document.getElementById('signin-form');
 const signupForm = document.getElementById('signup-form');
 const passwordResetForm = document.getElementById('reset-form');
@@ -7,37 +8,55 @@ const signupLink = document.getElementById('signup-link');
 const signinLink = document.getElementById('signin-link');
 const forgotPasswordLink = document.getElementById('forgot-password-link');
 const backToLoginLink = document.getElementById('back-to-login-link');
+const btnclose = document.getElementById('btn-close');
+const closebtn = document.querySelector(".seller-close");
+console.log(closebtn)
 
 // Add event listeners to the links
 signupLink.addEventListener('click', () => {
   signinForm.style.display = 'none';
   signupForm.style.display = 'block';
+  signinForm.reset();
 });
 
 signinLink.addEventListener('click', () => {
   signinForm.style.display = 'block';
   signupForm.style.display = 'none';
+  signupForm.reset();
+  sellerPasswordError.textContent = '';
+  
 });
 
 forgotPasswordLink.addEventListener('click', () => {
   signinForm.style.display = 'none';
   passwordResetForm.style.display = 'block';
+  signinForm.reset();
 });
 
 backToLoginLink.addEventListener('click', () => {
   signinForm.style.display = 'block';
   passwordResetForm.style.display = 'none';
+  passwordResetForm.reset();
 });
+btnclose.addEventListener('click' , () => {
+  signinForm.reset();
+  signupForm.reset();
+  sellerRegistrationForm.reset();
+  sellerRegistrationForm.reset();
+  errorMessageElement.textContent = '';
+  emailErrorMessageElement.textContent = '';
+  emailErrorMessage.textContent = '';
+  passwordError.textContent = '';
+  sellerphoneError.textContent = '';
+  selleremailerror.textContent = '';
+  sellerPasswordError.textContent='';
+})
 
+loginbtn.addEventListener('click', () =>{
+  signinForm.style.display = 'block';
+  signupForm.style.display = 'none';
+})
 
-
-//seller modal
-const sellerBtn = document.getElementById('seller-btn');
-const sellerRegistrationModal = new bootstrap.Modal(document.getElementById('seller-registration-modal'));
-
-sellerBtn.addEventListener('click', () => {
-  sellerRegistrationModal.show();
-});
 
 //phone number check at signup
 const phoneNumberInput = document.getElementById('phone-number');
@@ -51,6 +70,11 @@ phoneNumberInput.addEventListener('input', () => {
     errorMessageElement.textContent = 'Invalid phone number';
     errorMessageElement.style.color = 'red';
   } else {
+    errorMessageElement.textContent = '';
+  }
+});
+phoneNumberInput.addEventListener('input', () => {
+  if (phoneNumberInput.value === '') {
     errorMessageElement.textContent = '';
   }
 });
@@ -71,6 +95,11 @@ emailInput.addEventListener('input', () => {
     emailErrorMessageElement.textContent = '';
   }
 });
+emailInput.addEventListener('input', () => {
+  if (emailInput.value === '') {
+    emailErrorMessageElement.textContent = '';
+  }
+});
 emailInput.style.marginBottom = '1px'
 
 //email check for signin page
@@ -88,6 +117,15 @@ Inputemail.addEventListener('input', () => {
     emailErrorMessage.textContent = '';
   }
 });
+Inputemail.addEventListener('input', () => {
+  if (Inputemail.value === '') {
+    emailErrorMessage.textContent = '';
+  }
+});
+signupLink.addEventListener('click' , () =>{
+  emailErrorMessage.textContent = '';
+})
+
 Inputemail.style.marginBottom = '1px'
 
 const marquee = document.getElementById('marquee');
@@ -137,9 +175,33 @@ const passwordInput = document.getElementById('password');
             passwordError.innerHTML = 'Strong password!';
         }
     });
+    passwordInput.addEventListener('input', () => {
+      if (passwordInput.value === '') {
+        passwordError.textContent = '';
+      }
+    });
+
+
   //seller registration form
+
+  //seller modal
+const sellerBtn = document.getElementById('seller-btn');
+const sellerRegistrationModal = new bootstrap.Modal(document.getElementById('seller-registration-modal'));
+const sellerRegistrationForm = document.getElementById('seller-form'); // get the form element
+
+
+sellerBtn.addEventListener('click', () => {
+  sellerRegistrationModal.show();
+
+  closebtn.addEventListener('click', () => {
+    sellerRegistrationForm.reset();
+    sellerphoneError.textContent='';
+    selleremailerror.textContent='';
+    sellerPasswordError.textContent='';
+  });
+});
   const sellerPasswordInput = document.getElementById('seller-password');
-const sellerPasswordError = document.getElementById('seller-password-error');
+  const sellerPasswordError = document.getElementById('seller-password-error');
 
 sellerPasswordInput.addEventListener('input', () => {
   const password = sellerPasswordInput.value;
@@ -173,6 +235,13 @@ sellerPasswordInput.addEventListener('input', () => {
     sellerPasswordError.innerHTML = 'Strong password!';
   }
 });
+sellerPasswordInput.addEventListener('input', () => {
+  if (sellerPasswordInput.value === '') {
+    sellerPasswordError.textContent = '';
+  }
+});
+
+
 
 //seller valid email
 //seller valid email
@@ -190,6 +259,11 @@ sellerInputemail.addEventListener('input', () => {
     selleremailerror.textContent = '';
   }
 });
+sellerInputemail.addEventListener('input', () => {
+  if (sellerInputemail.value === '') {
+    selleremailerror.textContent = '';
+  }
+});
 sellerInputemail.style.marginBottom = '1px'
 
 //seller valid phone
@@ -204,6 +278,11 @@ SellerPhone.addEventListener('input', () => {
     sellerphoneError.textContent = 'Invalid phone number';
     sellerphoneError.style.color = 'red';
   } else {
+    sellerphoneError.textContent = '';
+  }
+});
+SellerPhone.addEventListener('input', () => {
+  if (SellerPhone.value === '') {
     sellerphoneError.textContent = '';
   }
 });

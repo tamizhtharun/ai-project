@@ -14,8 +14,11 @@ if (isset($_POST['login'])) {
         echo '<script>alert("Registered Sucessfully")</script>'; 
         // header("Location:index.html");
     } else {
-        echo '<script>alert("Wrong credentials. Please Try Again")</script>';
-         header("Location:index.html");
+        echo '<script>
+        alert("Wrong credentials. Please Try Again");
+        window.location.href ="index.html";  
+        </script>';
+       // header("Location:index.html");
     }
 }
 
