@@ -43,7 +43,7 @@ body{
 
 }
 .search-container {
-  margin-left: 100px;
+  margin-left: 225px;
   top: 2px;
   left: 0px;
     position: relative; 
@@ -436,4 +436,20 @@ section a{
 
 .contact{
   margin-left: 12px;
+}
+
+#email-error {
+  margin-left: 20px;
+}
+#password-error{
+  font-size: smaller;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+
+#email-error-message{
+  margin-left: 20px;
+}
+#error-message{
+  margin-left: 20px;
 }

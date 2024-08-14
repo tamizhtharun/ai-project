@@ -90,3 +90,40 @@ const marquee = document.getElementById('marquee');
         marquee.innerHTML = text;
       })
       .catch(error => console.error('Error loading text:', error));
+
+//strong password
+const passwordInput = document.getElementById('password');
+    const passwordError = document.getElementById('password-error');
+
+    passwordInput.addEventListener('input', () => {
+        const password = passwordInput.value;
+        let errorMessage = '';
+
+        if (password.length < 8) {
+            errorMessage += '<br>- Password should be at least 8 characters long.';
+        }
+
+        if (!/[a-z]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one lowercase letter.';
+        }
+
+        if (!/[A-Z]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one uppercase letter.';
+        }
+
+        if (!/[0-9]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one number.';
+        }
+
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one special character.';
+        }
+
+        if (errorMessage) {
+            passwordError.style.color = 'red';
+            passwordError.innerHTML = errorMessage;
+        } else {
+            passwordError.style.color = 'green';
+            passwordError.innerHTML = 'Strong password!';
+        }
+    });
