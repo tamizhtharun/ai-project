@@ -357,6 +357,9 @@ section a{
         margin-left: 0px;
         margin-right: 10px;
       }
+      .logo:hover{
+        animation: pulse 1s infinite;
+      }
       
       .quote:hover {
         animation: pulse 1s infinite;
