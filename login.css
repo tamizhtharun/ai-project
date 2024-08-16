@@ -418,7 +418,7 @@ section a{
   /* footer */
   footer {
     position: absolute; /* change from fixed to relative */
-    top: 1000px;
+    top: 1500px;
     bottom: 0;
     width: 100%;
     background-color: #ffffff;
@@ -475,4 +475,14 @@ section a{
   margin-left: 20px;
   font-size: smaller;
   margin-top: -15px;
+}
+.banner{
+  position: absolute;
+  width: 100%;
+  top: 510px;
+  align-items: center;
+  text-align: center;
+  /* background-color: #000; */
+  /* height: 400px; */
+  /* overflow: hidden; */
 }
