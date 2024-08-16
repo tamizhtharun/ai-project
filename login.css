@@ -470,3 +470,9 @@ section a{
   margin-left: 20px;
   font-size: smaller;
 }
+
+#reset-password-error{
+  margin-left: 20px;
+  font-size: smaller;
+  margin-top: -15px;
+}

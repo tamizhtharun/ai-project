@@ -1,6 +1,7 @@
 
 const modal = document.getElementById('staticBackdrop');
-const loginbtn = document.getElementById('login-btn')
+const loginbtn = document.getElementById('login-btn');
+const signupbtn = document.getElementById('signup-btn');
 const signinForm = document.getElementById('signin-form');
 const signupForm = document.getElementById('signup-form');
 const passwordResetForm = document.getElementById('reset-form');
@@ -10,7 +11,15 @@ const forgotPasswordLink = document.getElementById('forgot-password-link');
 const backToLoginLink = document.getElementById('back-to-login-link');
 const btnclose = document.getElementById('btn-close');
 const closebtn = document.querySelector(".seller-close");
-console.log(closebtn)
+console.log(closebtn);
+const sellerRegister = document.getElementById('seller-register')
+const sellerBtn = document.getElementById('seller-btn');
+const signinBtn = document.getElementById('signin-btn');
+const otpconfirmation = document.getElementById('otp-confirmation');
+const getotp =document.getElementById('get-otp');
+const enterphone = document.getElementById('enter-phone')
+const resetform = document.getElementById('reset-form')
+
 
 // Add event listeners to the links
 signupLink.addEventListener('click', () => {
@@ -30,8 +39,13 @@ signinLink.addEventListener('click', () => {
 forgotPasswordLink.addEventListener('click', () => {
   signinForm.style.display = 'none';
   passwordResetForm.style.display = 'block';
+  otpconfirmation.style.display = 'none'
   signinForm.reset();
 });
+getotp.addEventListener('click', () =>{
+  enterphone.style.display = 'none';
+  otpconfirmation.style.display = 'block';
+})
 
 backToLoginLink.addEventListener('click', () => {
   signinForm.style.display = 'block';
@@ -55,6 +69,7 @@ btnclose.addEventListener('click' , () => {
 loginbtn.addEventListener('click', () =>{
   signinForm.style.display = 'block';
   signupForm.style.display = 'none';
+  resetform.style.display = 'none'
 })
 
 
@@ -69,8 +84,10 @@ phoneNumberInput.addEventListener('input', () => {
   if (!phoneNumberRegex.test(phoneNumber)) {
     errorMessageElement.textContent = 'Invalid phone number';
     errorMessageElement.style.color = 'red';
+    signupbtn.disabled = true;
   } else {
     errorMessageElement.textContent = '';
+    signupbtn.disabled = false;
   }
 });
 phoneNumberInput.addEventListener('input', () => {
@@ -91,8 +108,10 @@ emailInput.addEventListener('input', () => {
   if (!emailRegex.test(email)) {
     emailErrorMessageElement.textContent = 'Invalid email address';
     emailErrorMessageElement.style.color = 'red';
+    signupbtn.disabled = true;
   } else {
     emailErrorMessageElement.textContent = '';
+    signupbtn.disabled = false;
   }
 });
 emailInput.addEventListener('input', () => {
@@ -113,8 +132,10 @@ Inputemail.addEventListener('input', () => {
   if (!emailRegex.test(email)) {
     emailErrorMessage.textContent = 'Invalid email address';
     emailErrorMessage.style.color = 'red';
+    signinBtn.disabled = true;
   } else {
     emailErrorMessage.textContent = '';
+    signinBtn.disabled = false;
   }
 });
 Inputemail.addEventListener('input', () => {
@@ -125,8 +146,33 @@ Inputemail.addEventListener('input', () => {
 signupLink.addEventListener('click' , () =>{
   emailErrorMessage.textContent = '';
 })
-
 Inputemail.style.marginBottom = '1px'
+
+//phone number checkup at forgot password
+const resetpassword = document.getElementById('reset-password');
+const erroronreset = document.getElementById('reset-password-error');
+resetpassword.addEventListener('input', () => {
+  const enteredphone = resetpassword.value;
+  const phoneNumberRegex = /^[0-9]{10}$/;
+
+  if (!phoneNumberRegex.test(enteredphone)) {
+    erroronreset.textContent = 'Invalid phone number';
+    erroronreset.style.color = 'red';
+    getotp.disabled = true;
+  } else {
+    erroronreset.textContent = '';
+    getotp.disabled = false;
+  }
+});
+phoneNumberInput.addEventListener('input', () => {
+  if (phoneNumberInput.value === '') {
+    errorMessageElement.textContent = '';
+  }
+});
+phoneNumberInput.style.marginBottom = '1px';
+
+
+
 
 const marquee = document.getElementById('marquee');
 
@@ -170,9 +216,11 @@ const passwordInput = document.getElementById('password');
         if (errorMessage) {
             passwordError.style.color = 'red';
             passwordError.innerHTML = errorMessage;
+            signupbtn.disabled = true;
         } else {
             passwordError.style.color = 'green';
             passwordError.innerHTML = 'Strong password!';
+            signupbtn.disabled = false;
         }
     });
     passwordInput.addEventListener('input', () => {
@@ -185,7 +233,6 @@ const passwordInput = document.getElementById('password');
   //seller registration form
 
   //seller modal
-const sellerBtn = document.getElementById('seller-btn');
 const sellerRegistrationModal = new bootstrap.Modal(document.getElementById('seller-registration-modal'));
 const sellerRegistrationForm = document.getElementById('seller-form'); // get the form element
 
@@ -230,9 +277,11 @@ sellerPasswordInput.addEventListener('input', () => {
   if (errorMessage) {
     sellerPasswordError.style.color = 'red';
     sellerPasswordError.innerHTML = errorMessage;
+    sellerRegister.disabled = true;
   } else {
     sellerPasswordError.style.color = 'green';
     sellerPasswordError.innerHTML = 'Strong password!';
+    sellerRegister.disabled = false;
   }
 });
 sellerPasswordInput.addEventListener('input', () => {
@@ -255,8 +304,10 @@ sellerInputemail.addEventListener('input', () => {
   if (!emailRegex.test(selleremail)) {
     selleremailerror.textContent = 'Invalid email address';
     selleremailerror.style.color = 'red';
+    sellerRegister.disabled = true;
   } else {
     selleremailerror.textContent = '';
+    sellerRegister.disabled = false;
   }
 });
 sellerInputemail.addEventListener('input', () => {
@@ -277,8 +328,10 @@ SellerPhone.addEventListener('input', () => {
   if (!phoneRegex.test(sellerphoneNumber)) {
     sellerphoneError.textContent = 'Invalid phone number';
     sellerphoneError.style.color = 'red';
+    sellerRegister.disabled = true;
   } else {
     sellerphoneError.textContent = '';
+    sellerRegister.disabled = false;
   }
 });
 SellerPhone.addEventListener('input', () => {

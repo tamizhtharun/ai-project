@@ -36,7 +36,7 @@
             </form>
           </li>
           <li class="nav-item btns">
-            <button id="seller-btn" type="button" class="signup-btn btn btn-outline-secondary">
+            <button id="seller-btn" type="button" class="btn btn-outline-secondary">
               Sell here!
             </button>
             <button type="button" id="login-btn" class="login-btn btn btn-outline-secondary"
@@ -91,7 +91,7 @@
               </section>
             </div>
             <div class="input-submit">
-              <button class="submit-btn" id="submit" name="login">
+              <button class="submit-btn" id="signin-btn" name="login">
                 <label for="submit">Sign In</label>
               </button>
             </div>
@@ -104,15 +104,29 @@
           <!-- Password Reset Form -->
         <form id="reset-form" method="POST" action="password_reset.php" style="display: none;">
           <h1 class="modal-title fs-5" id="box-header">Reset Password</h1>
+          <div id="enter-phone">
           <div class="input-box">
-            <input type="email" id="reset-email" class="input-field" placeholder="Email" name="email" autocomplete="off"
+            <input type="tel" id="reset-password" class="input-field" placeholder="Phone Number" name="phone" autocomplete="off"
               required>
-            <p id="reset-email-error"></p>
+            <p id="reset-password-error"></p>
           </div>
           <div class="input-submit">
-            <button class="submit-btn" id="reset-submit" name="password_reset">
-              <label for="reset-submit">Reset Password</label>
+            <button class="submit-btn" id="get-otp" name="get-otp">
+              <label for="get-otp">Get OTP</label>
             </button>
+          </div>
+          </div>
+          <div id="otp-confirmation">
+          <div class="input-box" id="enter-otp">
+            <input type="tel" id="reset-otp" class="input-field" placeholder="Enter your OTP" name="reset-otp" autocomplete="off"
+              required>
+            <p id="invalid-otp"></p>
+          </div>
+          <div class="input-submit">
+            <button class="submit-btn" id="confirm-otp" name="confirm-otp">
+              <label for="reset-submit">Confirm OTP</label>
+            </button>
+          </div>
           </div>
           <div class="back-to-login-link">
             <p>Back to <a href="#" id="back-to-login-link">Login</a></p>
@@ -143,7 +157,7 @@
                 <p id="password-error"></p>
             </div>
             <div class="input-submit">
-              <button class="submit-btn" id="submit" name="register">
+              <button class="submit-btn" id="signup-btn" name="register">
                 <label for="submit">Sign Up</label>
               </button>
             </div>
@@ -199,12 +213,13 @@
           <div class="sign-in-link">
             <p>Already a Seller?<a href="#" id="loginlink" data-bs-target="#staticBackdrop" data-bs-toggle="modal"> Sign In</a></p>
           </div>
-
         </form>
       </div>
     </div>
   </div>
 </div>
+
+<!-- successfully registered -->
 
 
 
