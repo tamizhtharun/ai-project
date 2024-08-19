@@ -103,16 +103,16 @@
 
 
           <!-- Password Reset Form -->
-        <form id="reset-form" method="POST" action="password_reset.php" style="display: none;">
+        <form id="reset-form" method="POST" action="sendotp.php" style="display: none;">
           <h1 class="modal-title fs-5" id="box-header">Reset Password</h1>
           <div class="input-box">
-            <input type="email" id="reset-email" class="input-field" placeholder="Email" name="email" autocomplete="off"
+            <input type="email" id="reset-email" class="input-field" placeholder="phone-number" name="phone-number" autocomplete="off"
               required>
             <p id="reset-email-error"></p>
           </div>
           <div class="input-submit">
-            <button class="submit-btn" id="reset-submit" name="password_reset">
-              <label for="reset-submit">Reset Password</label>
+            <button class="submit-btn" id="reset-submit" name="sendotp">
+              <label for="reset-submit">send otp</label>
             </button>
           </div>
           <div class="back-to-login-link">
@@ -174,7 +174,7 @@
           </div>
 
           <div class="input-box">
-            <input type="text" id="address" class="input-field" placeholder="Address" name="seller_name" required>
+            <input type="text" id="address" class="input-field" placeholder="Address" name="seller_address" required>
           </div>
 
           <div class="input-box">
