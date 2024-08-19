@@ -11,7 +11,9 @@ if (isset($_POST['login'])) {
     $result = $connection->query($query);
     if ($result->num_rows == 1) {
         // Successful login
-        echo '<script>alert("Registered Sucessfully")</script>'; 
+        echo '<script>alert("Registered Sucessfully");
+        window.location.href ="index.html"; 
+        </script>'; 
         // header("Location:index.html");
     } else {
         echo '<script>
