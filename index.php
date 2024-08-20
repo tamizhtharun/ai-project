@@ -55,7 +55,7 @@
   <div class="runningtxt">
     <marquee id="marquee" onmouseover="this.stop();" onmouseout="this.start();">
     </marquee>
-    
+
   </div>
   
 
@@ -222,7 +222,7 @@
   <div class="product-categories">
     <div class="product-category">
       <img class="img-category" src="./icons/phone.png" width="110px" height="70px">
-      <p class="category cat-mobile">Mobiles and Tabs</p>
+      <p class="category cat-mobile"></p>
     </div>
     <div class="product-category">
       <img class="img-category cat-tv" src="./icons/TV.png" width="110px" height="70px">
