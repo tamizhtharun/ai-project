@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect("localhost","root","","login");
+$connection = mysqli_connect("localhost","root","","consultancy_project");
 
 
 
