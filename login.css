@@ -19,7 +19,7 @@ body{
     top: 0px;
     /* margin-top: 10px; */
     height: 90px;
-    position: absolute;
+    position: fixed;
 }
 
 
@@ -43,7 +43,7 @@ body{
 
 }
 .search-container {
-  margin-left: 100px;
+  margin-left: 225px;
   top: 2px;
   left: 0px;
     position: relative; 
@@ -249,6 +249,16 @@ section a{
     font-weight: 600;
 }
 
+.back-to-login-link{
+  text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.back-to-login-link a{
+  color: #000;
+    font-weight: 600;
+}
+
 .sign-in-link{
     text-align: center;
     font-size: 15px;
@@ -296,7 +306,7 @@ section a{
 
 .runningtxt{
     background-color: rgb(238, 238, 238);
-    position: absolute;
+    position: fixed;
     top: 0px; 
     margin-top: 87px;
     left: 0;
@@ -403,78 +413,3 @@ section a{
     margin-top: 20px;
     margin-bottom: -20px;
   }
-
-
-  /* footer */
-  footer {
-    position: absolute; /* change from fixed to relative */
-    top: 1000px;
-    bottom: 0;
-    width: 100%;
-    background-color: #ffffff;
-    padding: 20px;
-    clear: both; /* add clear:both to make sure the footer clears any floating elements */
-  }
-
-.testdiv{
-  margin-top: 500px;
-  /* bottom: 0; */
-  /* margin-bottom:1000px; */
-  background-color: blueviolet;
-  position: absolute;
-}
-
-.contact{
-  margin-left: 12px;
-}
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s;
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-  margin: 10px;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.carousel-prev, .carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.carousel-prev {
-  left: 10px;
-}
-
-.carousel-next {
-  right: 10px;
-}
-
-/* Add some basic styling for the carousel navigation */
-.carousel-prev:hover, .carousel-next:hover {
-  background-color: #ccc;
-  border-radius: 50%;
-}
-
-/* Add some basic styling for the carousel item text */
-.carousel-item h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.carousel-item p {
-  font-size: 14px;
-  color: #666;
-}

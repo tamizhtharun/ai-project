@@ -1,20 +1,61 @@
 
 const modal = document.getElementById('staticBackdrop');
+const loginbtn = document.getElementById('login-btn')
 const signinForm = document.getElementById('signin-form');
 const signupForm = document.getElementById('signup-form');
+const passwordResetForm = document.getElementById('reset-form');
 const signupLink = document.getElementById('signup-link');
 const signinLink = document.getElementById('signin-link');
+const forgotPasswordLink = document.getElementById('forgot-password-link');
+const backToLoginLink = document.getElementById('back-to-login-link');
+const btnclose = document.getElementById('btn-close');
+const closebtn = document.querySelector(".seller-close");
+console.log(closebtn)
 
 // Add event listeners to the links
 signupLink.addEventListener('click', () => {
   signinForm.style.display = 'none';
   signupForm.style.display = 'block';
+  signinForm.reset();
 });
 
 signinLink.addEventListener('click', () => {
   signinForm.style.display = 'block';
   signupForm.style.display = 'none';
+  signupForm.reset();
+  sellerPasswordError.textContent = '';
+  
 });
+
+forgotPasswordLink.addEventListener('click', () => {
+  signinForm.style.display = 'none';
+  passwordResetForm.style.display = 'block';
+  signinForm.reset();
+});
+
+backToLoginLink.addEventListener('click', () => {
+  signinForm.style.display = 'block';
+  passwordResetForm.style.display = 'none';
+  passwordResetForm.reset();
+});
+btnclose.addEventListener('click' , () => {
+  signinForm.reset();
+  signupForm.reset();
+  sellerRegistrationForm.reset();
+  sellerRegistrationForm.reset();
+  errorMessageElement.textContent = '';
+  emailErrorMessageElement.textContent = '';
+  emailErrorMessage.textContent = '';
+  passwordError.textContent = '';
+  sellerphoneError.textContent = '';
+  selleremailerror.textContent = '';
+  sellerPasswordError.textContent='';
+})
+
+loginbtn.addEventListener('click', () =>{
+  signinForm.style.display = 'block';
+  signupForm.style.display = 'none';
+})
 
 
 //phone number check at signup
@@ -29,6 +70,11 @@ phoneNumberInput.addEventListener('input', () => {
     errorMessageElement.textContent = 'Invalid phone number';
     errorMessageElement.style.color = 'red';
   } else {
+    errorMessageElement.textContent = '';
+  }
+});
+phoneNumberInput.addEventListener('input', () => {
+  if (phoneNumberInput.value === '') {
     errorMessageElement.textContent = '';
   }
 });
@@ -49,6 +95,11 @@ emailInput.addEventListener('input', () => {
     emailErrorMessageElement.textContent = '';
   }
 });
+emailInput.addEventListener('input', () => {
+  if (emailInput.value === '') {
+    emailErrorMessageElement.textContent = '';
+  }
+});
 emailInput.style.marginBottom = '1px'
 
 //email check for signin page
@@ -66,6 +117,15 @@ Inputemail.addEventListener('input', () => {
     emailErrorMessage.textContent = '';
   }
 });
+Inputemail.addEventListener('input', () => {
+  if (Inputemail.value === '') {
+    emailErrorMessage.textContent = '';
+  }
+});
+signupLink.addEventListener('click' , () =>{
+  emailErrorMessage.textContent = '';
+})
+
 Inputemail.style.marginBottom = '1px'
 
 const marquee = document.getElementById('marquee');
@@ -77,3 +137,153 @@ const marquee = document.getElementById('marquee');
         marquee.innerHTML = text;
       })
       .catch(error => console.error('Error loading text:', error));
+
+//strong password
+//signup form
+const passwordInput = document.getElementById('password');
+    const passwordError = document.getElementById('password-error');
+
+    passwordInput.addEventListener('input', () => {
+        const password = passwordInput.value;
+        let errorMessage = '';
+
+        if (password.length < 8) {
+            errorMessage += '<br>- Password should be at least 8 characters long.';
+        }
+
+        if (!/[a-z]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one lowercase letter.';
+        }
+
+        if (!/[A-Z]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one uppercase letter.';
+        }
+
+        if (!/[0-9]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one number.';
+        }
+
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            errorMessage += '<br>- Password should contain at least one special character.';
+        }
+
+        if (errorMessage) {
+            passwordError.style.color = 'red';
+            passwordError.innerHTML = errorMessage;
+        } else {
+            passwordError.style.color = 'green';
+            passwordError.innerHTML = 'Strong password!';
+        }
+    });
+    passwordInput.addEventListener('input', () => {
+      if (passwordInput.value === '') {
+        passwordError.textContent = '';
+      }
+    });
+
+
+  //seller registration form
+
+  //seller modal
+const sellerBtn = document.getElementById('seller-btn');
+const sellerRegistrationModal = new bootstrap.Modal(document.getElementById('seller-registration-modal'));
+const sellerRegistrationForm = document.getElementById('seller-form'); // get the form element
+
+
+sellerBtn.addEventListener('click', () => {
+  sellerRegistrationModal.show();
+
+  closebtn.addEventListener('click', () => {
+    sellerRegistrationForm.reset();
+    sellerphoneError.textContent='';
+    selleremailerror.textContent='';
+    sellerPasswordError.textContent='';
+  });
+});
+  const sellerPasswordInput = document.getElementById('seller-password');
+  const sellerPasswordError = document.getElementById('seller-password-error');
+
+sellerPasswordInput.addEventListener('input', () => {
+  const password = sellerPasswordInput.value;
+  let errorMessage = '';
+
+  if (password.length < 8) {
+    errorMessage += '<br>- Password should be at least 8 characters long.';
+  }
+
+  if (!/[a-z]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one lowercase letter.';
+  }
+
+  if (!/[A-Z]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one uppercase letter.';
+  }
+
+  if (!/[0-9]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one number.';
+  }
+
+  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+    errorMessage += '<br>- Password should contain at least one special character.';
+  }
+
+  if (errorMessage) {
+    sellerPasswordError.style.color = 'red';
+    sellerPasswordError.innerHTML = errorMessage;
+  } else {
+    sellerPasswordError.style.color = 'green';
+    sellerPasswordError.innerHTML = 'Strong password!';
+  }
+});
+sellerPasswordInput.addEventListener('input', () => {
+  if (sellerPasswordInput.value === '') {
+    sellerPasswordError.textContent = '';
+  }
+});
+
+
+
+//seller valid email
+//seller valid email
+const sellerInputemail = document.getElementById('seller-email');
+const selleremailerror = document.getElementById('sellerEmailError');
+
+sellerInputemail.addEventListener('input', () => {
+  const selleremail = sellerInputemail.value;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!emailRegex.test(selleremail)) {
+    selleremailerror.textContent = 'Invalid email address';
+    selleremailerror.style.color = 'red';
+  } else {
+    selleremailerror.textContent = '';
+  }
+});
+sellerInputemail.addEventListener('input', () => {
+  if (sellerInputemail.value === '') {
+    selleremailerror.textContent = '';
+  }
+});
+sellerInputemail.style.marginBottom = '1px'
+
+//seller valid phone
+const SellerPhone = document.getElementById('seller-phone');
+const sellerphoneError = document.getElementById('sellerphoneError');
+
+SellerPhone.addEventListener('input', () => {
+  const sellerphoneNumber = SellerPhone.value;
+  const phoneRegex = /^[0-9]{10}$/;
+
+  if (!phoneRegex.test(sellerphoneNumber)) {
+    sellerphoneError.textContent = 'Invalid phone number';
+    sellerphoneError.style.color = 'red';
+  } else {
+    sellerphoneError.textContent = '';
+  }
+});
+SellerPhone.addEventListener('input', () => {
+  if (SellerPhone.value === '') {
+    sellerphoneError.textContent = '';
+  }
+});
+SellerPhone.style.marginBottom = '1px';

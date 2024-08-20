@@ -19,6 +19,7 @@
         <img src="./icons/Hadezign-Hobbies-Photography.ico" alt="Logo" width="30" height="30"
           class="d-inline-block align-text-top">
         Namma Brand
+        Dead Stock
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +38,10 @@
             </form>
           </li>
           <li class="nav-item btns">
-            <button id="navbarSupportedContent" type="button" class="signup-btn btn btn-outline-secondary">
+            <button id="seller-btn" type="button" class="signup-btn btn btn-outline-secondary">
               Sell here!
             </button>
-            <button id="navbarSupportedContent" type="button" class="login-btn btn btn-outline-secondary"
+            <button type="button" id="login-btn" class="login-btn btn btn-outline-secondary"
               data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               Login
             </button>
@@ -57,6 +58,7 @@
     </marquee>
   </div>
 
+  
 
 
   <!-- modal -->
@@ -83,6 +85,7 @@
 
             </div>
             <div class="forgot">
+            <div class="forgot" id="forgot-password-link">
               <!-- <section>
                 <input type="checkbox" id="check">
                 <label for="check">Remember me</label>
@@ -100,6 +103,25 @@
               <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
             </div>
           </form>
+
+
+          <!-- Password Reset Form -->
+        <form id="reset-form" method="POST" action="password_reset.php" style="display: none;">
+          <h1 class="modal-title fs-5" id="box-header">Reset Password</h1>
+          <div class="input-box">
+            <input type="email" id="reset-email" class="input-field" placeholder="Email" name="email" autocomplete="off"
+              required>
+            <p id="reset-email-error"></p>
+          </div>
+          <div class="input-submit">
+            <button class="submit-btn" id="reset-submit" name="password_reset">
+              <label for="reset-submit">Reset Password</label>
+            </button>
+          </div>
+          <div class="back-to-login-link">
+            <p>Back to <a href="#" id="back-to-login-link">Login</a></p>
+          </div>
+        </form>
 
 
           <!-- Sign Up Form -->
@@ -123,6 +145,9 @@
               <input type="password" class="input-field" placeholder="Password" name="password" autocomplete="off"
                 required>
 
+              <input id="password" type="password" class="input-field" placeholder="Password" name="password" autocomplete="off"
+                required >
+                <p id="password-error"></p>
             </div>
             <div class="input-submit">
               <button class="submit-btn" id="submit" name="register">
@@ -132,11 +157,65 @@
             <div class="sign-in-link">
               <p>Already have an account? <a href="#" id="signin-link">Sign In</a></p>
             </div>
-          </form>
+          </form>          
         </div>
       </div>
     </div>
   </div>
+  <!-- seller modal -->
+<div class="modal fade" id="seller-registration-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ai consultancy</h1>
+        <button type="button" id="btn-close" class="seller-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Seller registration form -->
+        <form id="seller-form" method="POST" action="seller_registration.php" >
+          <h1 class="modal-title fs-5" id="box-header">Seller Registration</h1>
+          <div class="input-box">
+            <input type="text" id="seller-name" class="input-field" placeholder="Seller Name" name="seller_name" required>
+          </div>
+
+          <div class="input-box">
+            <input type="text" id="address" class="input-field" placeholder="Address" name="seller_address" required>
+          </div>
+
+          <div class="input-box">
+            <input type="tel" id="seller-phone" class="input-field" placeholder="Phone Number" name="seller_phone" required>
+            <p id="sellerphoneError"></p>  
+          </div>
+
+          <div class="input-box">
+            <input type="email" id="seller-email" class="input-field" placeholder="Email" name="seller_email" required>
+            <p id="sellerEmailError"></p>
+          </div>
+
+            <div class="input-box">
+              <input type="password" id="seller-password" class="input-field" placeholder="Password" name="seller_password" required>
+              <p id="seller-password-error"></p>
+            </div>
+
+          <div class="input-submit">
+            <button class="submit-btn" id="seller-register" name="seller_register">
+              <label for="seller-register">Register</label>
+            </button>
+          </div>
+          <div class="sign-in-link">
+            <p>Already a Seller?<a href="#" id="loginlink" data-bs-target="#staticBackdrop" data-bs-toggle="modal"> Sign In</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 
   <!-- Quote -->
@@ -200,6 +279,7 @@
   </div>
 
   
+  hello
 </div>
 
 <!-- Footer -->
