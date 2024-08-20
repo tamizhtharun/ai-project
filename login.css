@@ -421,21 +421,13 @@ section a{
   /* footer */
   footer {
     position: absolute; /* change from fixed to relative */
-    top: 1000px;
+    top: 1500px;
     bottom: 0;
     width: 100%;
     background-color: #ffffff;
     padding: 20px;
     clear: both; /* add clear:both to make sure the footer clears any floating elements */
   }
-
-.testdiv{
-  margin-top: 500px;
-  /* bottom: 0; */
-  /* margin-bottom:1000px; */
-  background-color: blueviolet;
-  position: absolute;
-}
 
 .contact{
   margin-left: 12px;
@@ -472,4 +464,25 @@ section a{
 #sellerphoneError{
   margin-left: 20px;
   font-size: smaller;
+}
+
+.banner{
+  position: absolute;
+  top: 515px;
+  height: 400px;
+  width: 100%;
+  user-select: none;
+}
+.long {
+  width: 1519px;
+  height: 300px;
+  margin-right:-50px;
+  margin-left: 0px;
+}
+.img {
+  width: 1520px;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  right: 0;
 }
