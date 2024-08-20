@@ -4,21 +4,14 @@ const loginbtn = document.getElementById('login-btn');
 const signupbtn = document.getElementById('signup-btn');
 const signinForm = document.getElementById('signin-form');
 const signupForm = document.getElementById('signup-form');
-const passwordResetForm = document.getElementById('reset-form');
 const signupLink = document.getElementById('signup-link');
 const signinLink = document.getElementById('signin-link');
-const forgotPasswordLink = document.getElementById('forgot-password-link');
-const backToLoginLink = document.getElementById('back-to-login-link');
 const btnclose = document.getElementById('btn-close');
 const closebtn = document.querySelector(".seller-close");
 console.log(closebtn);
 const sellerRegister = document.getElementById('seller-register')
 const sellerBtn = document.getElementById('seller-btn');
 const signinBtn = document.getElementById('signin-btn');
-const otpconfirmation = document.getElementById('otp-confirmation');
-const getotp =document.getElementById('get-otp');
-const enterphone = document.getElementById('enter-phone')
-const resetform = document.getElementById('reset-form')
 
 
 // Add event listeners to the links
@@ -36,22 +29,6 @@ signinLink.addEventListener('click', () => {
   
 });
 
-forgotPasswordLink.addEventListener('click', () => {
-  signinForm.style.display = 'none';
-  passwordResetForm.style.display = 'block';
-  otpconfirmation.style.display = 'none'
-  signinForm.reset();
-});
-getotp.addEventListener('click', () =>{
-  enterphone.style.display = 'none';
-  otpconfirmation.style.display = 'block';
-})
-
-backToLoginLink.addEventListener('click', () => {
-  signinForm.style.display = 'block';
-  passwordResetForm.style.display = 'none';
-  passwordResetForm.reset();
-});
 btnclose.addEventListener('click' , () => {
   signinForm.reset();
   signupForm.reset();
@@ -147,29 +124,6 @@ signupLink.addEventListener('click' , () =>{
   emailErrorMessage.textContent = '';
 })
 Inputemail.style.marginBottom = '1px'
-
-//phone number checkup at forgot password
-const resetpassword = document.getElementById('reset-password');
-const erroronreset = document.getElementById('reset-password-error');
-resetpassword.addEventListener('input', () => {
-  const enteredphone = resetpassword.value;
-  const phoneNumberRegex = /^[0-9]{10}$/;
-
-  if (!phoneNumberRegex.test(enteredphone)) {
-    erroronreset.textContent = 'Invalid phone number';
-    erroronreset.style.color = 'red';
-    getotp.disabled = true;
-  } else {
-    erroronreset.textContent = '';
-    getotp.disabled = false;
-  }
-});
-phoneNumberInput.addEventListener('input', () => {
-  if (phoneNumberInput.value === '') {
-    errorMessageElement.textContent = '';
-  }
-});
-phoneNumberInput.style.marginBottom = '1px';
 
 
 

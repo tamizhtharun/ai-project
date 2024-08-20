@@ -322,12 +322,12 @@ section a{
 .quote-container{
   margin-bottom: 10px;
   bottom: 0px;
-  margin-top: -200px;
+  /* margin-top: -200px; */
   justify-content: center;
   left: 0px;
-  top: 0;
+  top: 180px;
   right: 0;
-  position: relative;
+  position: absolute;
   width: 100%;
   display: flex;
   user-select: none;
@@ -429,14 +429,6 @@ section a{
     clear: both; /* add clear:both to make sure the footer clears any floating elements */
   }
 
-.testdiv{
-  margin-top: 500px;
-  /* bottom: 0; */
-  /* margin-bottom:1000px; */
-  background-color: blueviolet;
-  position: absolute;
-}
-
 .contact{
   margin-left: 12px;
   font-size: smaller;
@@ -474,18 +466,23 @@ section a{
   font-size: smaller;
 }
 
-#reset-password-error{
-  margin-left: 20px;
-  font-size: smaller;
-  margin-top: -15px;
-}
 .banner{
   position: absolute;
+  top: 515px;
+  height: 400px;
   width: 100%;
-  top: 510px;
-  align-items: center;
-  text-align: center;
-  /* background-color: #000; */
-  /* height: 400px; */
-  /* overflow: hidden; */
+  user-select: none;
+}
+.long {
+  width: 1519px;
+  height: 300px;
+  margin-right:-50px;
+  margin-left: 0px;
+}
+.img {
+  width: 1520px;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  right: 0;
 }
