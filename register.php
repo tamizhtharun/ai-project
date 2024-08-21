@@ -14,7 +14,7 @@ if (isset($_POST['register'])) {
     if ($result->num_rows > 0) {
         echo '<script>
         alert("error => Email already exists. Please login.");
-         window.location.href ="index.html";  
+         window.location.href ="index.php";  
         </script>';
 
     } else {

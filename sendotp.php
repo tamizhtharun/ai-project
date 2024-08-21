@@ -2,11 +2,7 @@
 include('dbcon.php');
 session_start();
 
-<<<<<<< HEAD:sendotp.php
-if(isset($_POST['sendotp']))
-=======
 if (isset($_POST['password_reset'])) 
->>>>>>> 2c15df46e28c3d7affadb19ef8a852da941c333e:password_reset.php
 {
     $email = $_POST['email'];
     $query = "SELECT * FROM users WHERE email = ?";
@@ -46,7 +42,7 @@ if (isset($_POST['password_reset']))
     } else {
         echo '<script>
         alert("Email does not exist");
-        window.location.href ="index.html";  
+        window.location.href ="index.php";  
         </script>';
     }
 }

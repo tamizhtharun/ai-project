@@ -21,7 +21,7 @@ if (isset($_POST['save'])) {
     } else {
         echo '<script>
         alert("Something Occured");
-        window.location.href ="categories.html";  
+        window.location.href ="categories.php";  
         </script>';
         $connection->error;
     }

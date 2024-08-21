@@ -18,7 +18,7 @@ if (isset($_POST['seller_register'])) {
         // In this case, we just display a message for simplicity
         echo '<script>
         alert("Your registration request has been sent to the admin for approval.");
-        window.location.href ="index.html";  
+        window.location.href ="index.php";  
         </script>';
     } else {
         echo "Error: " . $connection->error;
