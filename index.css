@@ -9,7 +9,7 @@
 }
 body{
     /* height: 3000px; */
-    padding-top:150px ;
+    padding-top:120px ;
     background-color: rgb(255, 255, 255);
 }
 body::-webkit-scrollbar {
@@ -142,10 +142,10 @@ body::-webkit-scrollbar-thumb {
 
 
 .runningtxt{
-    margin-top: 80px;
+    margin-top: 0px;
     height: 30px;
     width: 100%;
-    background-color: rgb(210, 210, 210);
+    /* background-color: rgb(241, 240, 240); */
     color: rgb(0, 0, 0);
     align-items: center;
     text-align: center;
@@ -154,7 +154,8 @@ body::-webkit-scrollbar-thumb {
   margin-top: 2px;
 }
 .menu-bar{
-    background-color: rgba(255, 255, 255, 0.5); /* transparent white background */
+  /* position: absolute; */
+    background-color: rgba(206, 206, 206, 0.5); /* transparent white background */
     height: 35px;
     display: flex;
     align-items: center;
@@ -164,6 +165,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 300px;
     backdrop-filter: blur(10px); /* blur effect */
     margin-bottom: 10px;
+    top: 80px;
 }
 
 .nav-link{
