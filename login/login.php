@@ -7,7 +7,7 @@ if (isset($_POST['login'])) {
     $password = $_POST['password'];
 
     // Check if email and password are correct
-    $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+    $query = "SELECT * FROM users WHERE EMAIL = '$email' AND PASSWORD = '$password'";
     $result = $connection->query($query);
     if ($result->num_rows == 1) {
         // Successful login

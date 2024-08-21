@@ -9,7 +9,7 @@ if (isset($_POST['register'])) {
     $password = $_POST['password'];
 
     // Check if email already exists
-    $query = "SELECT * FROM users WHERE email = '$email'";
+    $query = "SELECT * FROM users WHERE EMAIL = '$email'";
     $result = $connection->query($query);
     if ($result->num_rows > 0) {
         echo '<script>
@@ -19,7 +19,7 @@ if (isset($_POST['register'])) {
 
     } else {
         // Insert into database
-        $query = "INSERT INTO users (username, email, phone_number, password) VALUES ('$username', '$email', '$phone_number', '$password')";
+        $query = "INSERT INTO users (USERNAME, EMAIL, PHONE_NUMBER, PASSWORD) VALUES ('$username', '$email', '$phone_number', '$password')";
         if ($connection->query($query) === TRUE) {
             echo '<script>
             alert("success => Registered successfully.");
