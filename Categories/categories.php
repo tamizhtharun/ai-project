@@ -1,5 +1,5 @@
 <?php
-include('dbcon.php');
+include('../Database/dbcon.php');
 
 
 if (isset($_POST['save'])) {
@@ -21,7 +21,7 @@ if (isset($_POST['save'])) {
     } else {
         echo '<script>
         alert("Something Occured");
-        window.location.href ="categories.php";  
+        window.location.href ="./categories.php";  
         </script>';
         $connection->error;
     }

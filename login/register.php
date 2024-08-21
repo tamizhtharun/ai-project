@@ -1,5 +1,5 @@
 <?php
-include('dbcon.php');
+include('../Database/dbcon.php');
 
 // Register functionality
 if (isset($_POST['register'])) {
@@ -14,7 +14,7 @@ if (isset($_POST['register'])) {
     if ($result->num_rows > 0) {
         echo '<script>
         alert("error => Email already exists. Please login.");
-         window.location.href ="index.php";  
+         window.location.href ="../index.php";  
         </script>';
 
     } else {
@@ -23,7 +23,7 @@ if (isset($_POST['register'])) {
         if ($connection->query($query) === TRUE) {
             echo '<script>
             alert("success => Registered successfully.");
-             window.location.href ="index.html";  
+             window.location.href ="../index.php";  
         </script>';
         } else {
             echo json_encode(['error' => 'Error: ' . $connection->error]);

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('dbcon.php'); // Database connection
+include('../Database/dbcon.php'); // Database connection
 
 if (isset($_POST['seller_register'])) {
     $seller_name = $_POST['seller_name'];
@@ -18,7 +18,7 @@ if (isset($_POST['seller_register'])) {
         // In this case, we just display a message for simplicity
         echo '<script>
         alert("Your registration request has been sent to the admin for approval.");
-        window.location.href ="index.php";  
+        window.location.href ="../index.php";  
         </script>';
     } else {
         echo "Error: " . $connection->error;

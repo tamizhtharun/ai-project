@@ -1,5 +1,5 @@
 <?php
-include('dbcon.php');
+include('../Database/dbcon.php');
 
 // Login functionality
 if (isset($_POST['login'])) {
@@ -12,13 +12,13 @@ if (isset($_POST['login'])) {
     if ($result->num_rows == 1) {
         // Successful login
         echo '<script>alert("Registered Sucessfully");
-        window.location.href ="index.php"; 
+        window.location.href ="../index.php"; 
         </script>'; 
         // header("Location:index.html");
     } else {
         echo '<script>
         alert("Wrong credentials. Please Try Again");
-        window.location.href ="index.php";  
+        window.location.href ="../index.php";  
         </script>';
        // header("Location:index.html");
     }

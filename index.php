@@ -71,7 +71,7 @@
         </div>
         <div id="modal-body" class="modal-body">
           <!-- Sign In Form -->
-          <form id="signin-form" method="POST" action="login.php">
+          <form id="signin-form" method="POST" action="login/login.php">
             <h1 class="modal-title fs-5" id="box-header">Login</h1>
             <div class="input-box">
               <input type="email" id="mail" class="input-field" placeholder="Email" name="email" autocomplete="off"
@@ -124,7 +124,7 @@
 
           <!-- Sign Up Form -->
 
-          <form id="signup-form" method="POST" action="register.php" style="display: none;">
+          <form id="signup-form" method="POST" action="login/register.php" style="display: none;">
             <h1 class="modal-title fs-5" id="box-header">SignUp</h1>
             <div class="input-box">
               <input type="text" class="input-field" placeholder="Username" name="username" autocomplete="off" required>
@@ -168,7 +168,7 @@
       </div>
       <div id="modal-body" class="modal-body">
         <!-- Seller registration form -->
-        <form id="seller-registration-form" method="POST" action="seller_registration.php" style="display: block;">
+        <form id="seller-registration-form" method="POST" action="login/seller_registration.php" style="display: block;">
           <h1 class="modal-title fs-5" id="box-header">Seller Registration</h1>
           <div class="input-box">
             <input type="text" id="seller-name" class="input-field" placeholder="Seller Name" name="seller_name" required>
