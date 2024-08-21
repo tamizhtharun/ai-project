@@ -12,10 +12,21 @@ body{
     padding-top:150px ;
     background-color: rgb(255, 255, 255);
 }
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  backdrop-filter: blur(20px);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(185, 184, 184);
+  border-radius: 50px;
+}
 .header{
-    position: fixed;
-    /* background-color: rgb(255, 221, 0); */
-    
+    position: fixed;    
     top: 0;
     left: 0;
     right: 0;
@@ -138,6 +149,9 @@ body{
     color: rgb(0, 0, 0);
     align-items: center;
     text-align: center;
+}
+.runningtxt marquee{
+  margin-top: 2px;
 }
 .menu-bar{
     background-color: rgba(255, 255, 255, 0.5); /* transparent white background */
