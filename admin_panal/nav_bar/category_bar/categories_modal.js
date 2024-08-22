@@ -11,7 +11,7 @@ var form = document.getElementById("myForm"),
     
 const productNotAdded = document.getElementById('productNotAdded');
 
-let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : []
+// let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : []
 let isEdit = false, editId
 showInfo()
 
