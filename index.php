@@ -1,72 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="login.css">
-  <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Stock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Ai Consultancy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-  <nav id="nav-bar-head" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./icons/Hadezign-Hobbies-Photography.ico" alt="Logo" width="30" height="30"
-          class="d-inline-block align-text-top">
-        Dead Stock
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse page-head" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item search-form" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
-              <div class="search-container">
-                <ion-icon class="search-outline" name="search-outline" type="submit" size="small"
-                  style="padding: 5px;"></ion-icon>
-                <input id="form-control-me-2" class="form-control me-2" type="search" placeholder="Search"
-                  aria-label="Search">
-              </div>
-            </form>
-          </li>
-          <li class="nav-item btns">
-            <button id="seller-btn" type="button" class="signup-btn btn btn-outline-secondary">
-              Sell here!
-            </button>
-            <button type="button" class="login-btn btn btn-outline-secondary"
-              data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Login
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
+    <!-- header -->
+  <div class="header">   
+    <nav id="nav-bar-head" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./icons/dead stock.png" alt="Logo" width="30" height="30">
+            Dead Stock
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse page-head" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item search-form" id="navbarSupportedContent">
+                <form class="d-flex" role="search">
+                  <div class="search-container">
+                    <ion-icon class="search-outline" name="search-outline" type="submit" size="small"
+                      style="padding: 5px;"></ion-icon>
+                    <input id="form-control-me-2" class="form-control me-2" type="search" placeholder="Search"
+                      aria-label="Search">
+                  </div>
+                </form>
+              </li>
+              <li class="nav-item btns">
+                <button id="seller-btn" type="button" class="seller-btn btn btn-outline-secondary">
+                  Sell here!
+                </button>
+                <button type="button" id="login-btn" class="login-btn btn btn-outline-secondary"
+                  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Login
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
   <!-- runningtxt -->
-  <div class="runningtxt">
+<div class="runningtxt">
     <marquee id="marquee" onmouseover="this.stop();" onmouseout="this.start();">
     </marquee>
 
   </div>
-  
 
+<!-- menu bar -->
+<nav class="navbar  menu-bar">
+		<li class="nav-item dropdown">
+		   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Indexable Milling Tools</a>
+		    <ul class="dropdown-menu">
+			  <li><a class="dropdown-item" href="#"> Milling Inserts & Grades</a></li>
+			  <li><a class="dropdown-item" href="#"> Shoulder Milling </a></li>
+			  <li><a class="dropdown-item" href="#"> High Feed Milling </a></li>
+			  <li><a class="dropdown-item" href="#">Face Milling</a></li>
+			  <li><a class="dropdown-item" href="#"> Copy Milling </a></li>
+			  <li><a class="dropdown-item" href="#"> Engraving / Chamfering </a></li>
+			  <li><a class="dropdown-item" href="#"> Helical Milling </a></li>
+			  <li><a class="dropdown-item" href="#"> Disc Milling </a></li>
+		    </ul>
+		</li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Solid Carbide Endmills</a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">G450 Series</a></li>
+               <li><a class="dropdown-item" href="#">G550 Series</a></li>
+               <li><a class="dropdown-item" href="#">V470 Series</a></li>
+               <li><a class="dropdown-item" href="#">H65X Series</a></li>
+               <li><a class="dropdown-item" href="#">H68X Series</a></li>
+               <li><a class="dropdown-item" href="#">H70X Series</a></li>
+               <li><a class="dropdown-item" href="#">M50X Series</a></li>
+               <li><a class="dropdown-item" href="#">V47X Series</a></li>
+               <li><a class="dropdown-item" href="#">V53X Series</a></li>
+               <li><a class="dropdown-item" href="#">A100 Series</a></li>
+               <li><a class="dropdown-item" href="#">A200 Series</a></li>
+               <li><a class="dropdown-item" href="#">A300 Series</a></li>
+               <li><a class="dropdown-item" href="#">S910 Series</a></li>
+               <li><a class="dropdown-item" href="#">S920 Series</a></li>
+               <li><a class="dropdown-item" href="#">S930 Series</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Turning Tools</a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">Parting & Grooving Tools</a></li>
+               <li><a class="dropdown-item" href="#">Turning Inserts</a></li>
+               <li><a class="dropdown-item" href="#">Turning Tool Holders</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Holemaking Tools  </a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">Solid Carbide Drills</a></li>
+               <li><a class="dropdown-item" href="#">Indexable Drilling</a></li>
+               <li><a class="dropdown-item" href="#">Solid Carbide Reamers</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Threading Tools </a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#"> Thread Turning Tools</a></li>
+               <li><a class="dropdown-item" href="#"> Thread Milling Tools - Carbide Thread Mills </a></li>
+               <li><a class="dropdown-item" href="#"> Thread Tapping Tools - Carbide Taps </a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Others  </a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+             </ul>
+         </li>
+   <!-- navbar-collapse.// -->
+</nav>
 
-  <!-- modal -->
+  </div>
+  <!-- End header -->
+
+  <!-- login modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Ai consultancy</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Dead Stock</h1>
           <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div id="modal-body" class="modal-body">
@@ -93,7 +162,7 @@
               </section>
             </div>
             <div class="input-submit">
-              <button class="submit-btn" id="submit" name="login">
+              <button class="submit-btn" id="signin-btn" name="login">
                 <label for="submit">Sign In</label>
               </button>
             </div>
@@ -102,6 +171,7 @@
             </div>
           </form>
 
+<<<<<<< HEAD:index.php
 
           <!-- Password Reset Form -->
         <form id="reset-form" method="POST" action="sendotp.php" style="display: none;">
@@ -125,6 +195,10 @@
           <!-- Sign Up Form -->
 
           <form id="signup-form" method="POST" action="login/register.php" style="display: none;">
+=======
+          <!-- Sign Up Form -->
+          <form id="signup-form" method="POST" action="register.php" style="display: none;">
+>>>>>>> tamilselvan:index.html
             <h1 class="modal-title fs-5" id="box-header">SignUp</h1>
             <div class="input-box">
               <input type="text" class="input-field" placeholder="Username" name="username" autocomplete="off" required>
@@ -145,7 +219,7 @@
                 <p id="password-error"></p>
             </div>
             <div class="input-submit">
-              <button class="submit-btn" id="submit" name="register">
+              <button class="submit-btn" id="signup-btn" name="register">
                 <label for="submit">Sign Up</label>
               </button>
             </div>
@@ -157,18 +231,24 @@
       </div>
     </div>
   </div>
+
+
   <!-- seller modal -->
-<div class="modal fade" id="seller-registration-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <div class="modal fade" id="seller-registration-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ai consultancy</h1>
-        <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Dead Stock</h1>
+        <button type="button" id="btn-close" class="seller-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="modal-body" class="modal-body">
         <!-- Seller registration form -->
+<<<<<<< HEAD:index.php
         <form id="seller-registration-form" method="POST" action="login/seller_registration.php" style="display: block;">
+=======
+        <form id="seller-form" method="POST" action="seller_registration.php" >
+>>>>>>> tamilselvan:index.html
           <h1 class="modal-title fs-5" id="box-header">Seller Registration</h1>
           <div class="input-box">
             <input type="text" id="seller-name" class="input-field" placeholder="Seller Name" name="seller_name" required>
@@ -201,156 +281,252 @@
           <div class="sign-in-link">
             <p>Already a Seller?<a href="#" id="loginlink" data-bs-target="#staticBackdrop" data-bs-toggle="modal"> Sign In</a></p>
           </div>
-
         </form>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
-
-
-  <!-- Quote -->
+  <!-- quote container -->
   <div class="quote-container">
     <p class="quote"><span class="quote-bold">Buy</span> at your Desired bidding price</p>
-    <img src="./icons/Hadezign-Hobbies-Photography.ico" alt="Logo" class="logo">
+    <img src="./icons/dead stock.png" alt="Logo" class="logo">
   </div>
+
+
   <!-- Product categories -->
   <div class="product-categories">
     <div class="product-category">
+<<<<<<< HEAD:index.php
       <img class="img-category" src="./icons/phone.png" width="110px" height="70px">
       <p class="category cat-mobile"></p>
+=======
+      <a href="#" class="link-body-emphasis link-underline-opacity-0">
+        <div class="img-category">
+      <img src="./icons/index milling.png">
+    </div>
+    <p class="category-txt">Indexable Milling Tools</p>
+    </a>
+>>>>>>> tamilselvan:index.html
     </div>
     <div class="product-category">
-      <img class="img-category cat-tv" src="./icons/TV.png" width="110px" height="70px">
-      <p class="category">TV</p>
+      <a href="#" class="link-body-emphasis link-underline-opacity-0">
+        <div class="img-category">
+      <img src="./icons/endmill.png">
+    </div>
+    <p class="category-txt">Solid Carbide Endmills</p>
+      </a>
     </div>
     <div class="product-category">
-      <img class="img-category cat-headphone" src="./icons/headphones.png" width="110px" height="70px">
-      <p class="category ">Headphones</p>
+      <a href="#" class="link-body-emphasis link-underline-opacity-0">
+        <div class="img-category">
+      <img src="./icons/turning.png">
+    </div>
+    <p class="category-txt ">Turning Tools</p>
+      </a>
     </div>
     <div class="product-category">
-      <img class="img-category cat-watch" src="./icons/watch.png" width="110px" height="70px">
-      <p class="category">Smart Watches</p>
+      <a href="#" class="link-body-emphasis link-underline-opacity-0">
+        <div class="img-category">
+          <img src="./icons/hole.png">
+        </div>
+        <p class="category-txt">Holemaking Tools</p>
+      </a>
     </div>
     <div class="product-category">
-      <img class="img-category cat-electronics" src="./icons/Lap.png" width="70px" height="70px">
-      <p class="category">Electronics</p>
+      <a href="#" class="link-body-emphasis link-underline-opacity-0">
+        <div class="img-category">
+      <img src="./icons/Threading tools.png">
+    </div>
+    <p class="category-txt">Threading Tools</p>
+      </a>
     </div>
     <div class="product-category">
-      <img class="img-category cat-furniture" src="./icons/Sofa -4 copy.png" width="100px" height="70px">
-      <p class="category">Furnitures</p>
+      <a href="#" class="link-body-emphasis link-underline-opacity-0">
+        <div class="img-category">
+          <img src="./icons/others.png">
     </div>
-    <div class="product-category">
-      <img class="img-category cat-furniture" src="./icons/Sofa -4 copy.png" width="100px" height="70px">
-      <p class="category">Others</p>
+    <p class="category-txt">Others</p>
+      </a>
     </div>
 </div>
+<!-- end product category -->
 
-
-
-<div class="testdiv">
-  hello
-</div>
-
-<!-- Footer -->
- <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
-          </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Product 1</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Product 2</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Product 3</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Product 4</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Trending Products</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">My Account</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4 contact">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> MKCE, Karur - 639113</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            example@mkce.ac.in
-          </p>
-          <p><i class="fas fa-phone me-3"></i> +91 99988 xxxxx</p>
-          <p><i class="fas fa-print me-3"></i> +91 99988 xxxxx</p>
-        </div>
-        <!-- Grid column -->
+<!-- banner -->
+<div class="banner"> 
+    <div id="carouselExampleIndicators" class="carousel slide long">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      <!-- Grid row -->
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="img" src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/b35a105fe8bc8cbb.png?q=20" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img class="img" src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/3322c8a97f524397.jpeg?q=20" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img class="img" src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/42a2afb08834f823.jpeg?q=20" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 Copyright:
-    <a class="text-reset fw-bold" href="#">Ai Consultancy</a>
   </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
+  </div>
+<!-- end banner  -->
+
+<!-- Live Bidding -->
+<div class="container swiper">
+  <p class="swiper-title">Live Bidding</p>
+  <div class="slider-wrapper">
+    <div class="card-list swiper-wrapper">
+      <div class="card-item swiper-slide">
+        <div class="card-img">
+        <img alt="Card-img" src="./icons/index milling.png" >
+        </div>
+        
+
+
+
+      </div>
+
+      <div class="card-item swiper-slide">
+        
+      </div>
+
+      <div class="card-item swiper-slide">
+        
+      </div>
+
+      <div class="card-item swiper-slide">
+        
+      </div>
+
+      <div class="card-item swiper-slide">
+        
+      </div>
+
+      <div class="card-item swiper-slide">
+        
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-slide-button swiper-button-prev"></div>
+    <div class="swiper-slide-button swiper-button-next"></div>
+  </div>
+</div>
+
+
+<!-- footer -->
+<div class="footer">
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Dead Stock
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Product 1</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Product 2</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Product 3</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Product 4</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Trending Products</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">My Account</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4 contact">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> MKCE, Karur - 639113</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                example@mkce.ac.in
+              </p>
+              <p><i class="fas fa-phone me-3"></i> +91 99988 xxxxx</p>
+              <p><i class="fas fa-print me-3"></i> +91 99988 xxxxx</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="#">Dead Stock</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+</div>
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!-- ionicons -->
- <script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="index.js"></script>
+
 </body>
 </html>
