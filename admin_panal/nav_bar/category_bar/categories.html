@@ -124,7 +124,7 @@
 
                 <div class="modal-body">
 
-                    <form action="categories.php" id="myForm">
+                    <form action="categories.php" method="post" id="myForm">
 
                         <div class=" imgholder">
                             <label for="imgInput" class="upload">
@@ -143,16 +143,15 @@
                                 <label for="sDate">Date:</label>
                                 <input type="date" name="Category_date" id="sDate" abled>
                             </div>
-
-                        </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" form="myForm" class="btn btn-primary submit" name="Submit">Submit</button>
+                            </div>                        </div>
 
                     </form>
                 </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" form="myForm" class="btn btn-primary submit" name="Submit">Submit</button>
-                </div>
+                
             </div>
         </div>
     </div>

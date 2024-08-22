@@ -10,8 +10,8 @@ if (isset($_POST['Submit'])) {
     // $updates = $_POST['updates'];
 
 
-    $query = "INSERT INTO categories (CATEGORY_NAME,CATEGORY_IMAGE,CATEGORY_DATE) 
-              VALUES ('$Product_name', '$Product_image',$Product_date)";
+    $query = "INSERT INTO category (CATEGORY_NAME,CATEGORY_IMAGE,CATEGORY_DATE) 
+              VALUES ('$Product_name', '$Product_image','$Product_date')";
     echo"Category added successfully";
     if ($connection->query($query) === TRUE) {
         // Send notification to admin (this could be an email, or an entry in an admin dashboard)

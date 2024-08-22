@@ -218,7 +218,7 @@
       </div>
       <div id="modal-body" class="modal-body">
         <!-- Seller registration form -->
-        <form id="seller-form" method="POST" action="seller_registration.php" >
+        <form id="seller-registration-form" method="POST" action="login/seller_registration.php" style="display: block;">
           <h1 class="modal-title fs-5" id="box-header">Seller Registration</h1>
           <div class="input-box">
             <input type="text" id="seller-name" class="input-field" placeholder="Seller Name" name="seller_name" required>
