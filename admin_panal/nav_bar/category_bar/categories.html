@@ -40,10 +40,10 @@
               </div>
               <ul class="nav flex-column">
                   <li class="nav-item">
-                      <a class="nav-link" href="/admin.html">Home</a>
+                      <a class="nav-link" href="../../admin.html">Home</a>
                   </li>    
                   <li class="nav-item">
-                      <a class="nav-link" href="/dashboard.html">Dashboard</a>
+                      <a class="nav-link" href="../dashboard.html">Dashboard</a>
                    </li>
                 <li>
                       <!-- <ul class="nav flex-column ml-3"> -->
@@ -51,7 +51,7 @@
                           <li class="nav-item">
                               <a class="nav-link" href="orders.html">Orders</a>
                               <!-- <ul class="nav flex-column ml-3"> -->
-                                  <li class="nav-item"><a class="nav-link" href="Categories.html">Categories</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="./categories.html">Categories</a></li>
                                   <li class="nav-item"><a class="nav-link" href="processed.html">Processed</a></li>
                                   <li class="nav-item"><a class="nav-link" href="shipped.html">Shipped</a></li>
                                   <li class="nav-item"><a class="nav-link" href="returned.html">Returned</a></li>
@@ -124,11 +124,11 @@
 
                 <div class="modal-body">
 
-                    <form action="#" id="myForm">
+                    <form action="categories.php" id="myForm">
 
                         <div class=" imgholder">
                             <label for="imgInput" class="upload">
-                                <input type="file" name="" id="imgInput">
+                                <input type="file" name="Category_image" id="imgInput">
                                 <i class="bi bi-plus-circle-dotted"></i>
                             </label>
                             <img src="download.png" alt="" width="200" height="200" class="img">
@@ -137,11 +137,11 @@
                         <div class="inputField">
                             <div>
                                 <label for="name">Name:</label>
-                                <input type="text" name="" id="name" required>
+                                <input type="text" name="Category_name" id="name" required>
                             </div>
                             <div>
                                 <label for="sDate">Date:</label>
-                                <input type="date" name="" id="sDate" abled>
+                                <input type="date" name="Category_date" id="sDate" abled>
                             </div>
 
                         </div>
@@ -151,7 +151,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" form="myForm" class="btn btn-primary submit">Submit</button>
+                    <button type="submit" form="myForm" class="btn btn-primary submit" name="Submit">Submit</button>
                 </div>
             </div>
         </div>
