@@ -171,34 +171,8 @@
             </div>
           </form>
 
-<<<<<<< HEAD:index.php
-
-          <!-- Password Reset Form -->
-        <form id="reset-form" method="POST" action="sendotp.php" style="display: none;">
-          <h1 class="modal-title fs-5" id="box-header">Reset Password</h1>
-          <div class="input-box">
-            <input type="email" id="reset-email" class="input-field" placeholder="phone-number" name="phone-number" autocomplete="off"
-              required>
-            <p id="reset-email-error"></p>
-          </div>
-          <div class="input-submit">
-            <button class="submit-btn" id="reset-submit" name="sendotp">
-              <label for="reset-submit">send otp</label>
-            </button>
-          </div>
-          <div class="back-to-login-link">
-            <p>Back to <a href="#" id="back-to-login-link">Login</a></p>
-          </div>
-        </form>
-
-
-          <!-- Sign Up Form -->
-
-          <form id="signup-form" method="POST" action="login/register.php" style="display: none;">
-=======
           <!-- Sign Up Form -->
           <form id="signup-form" method="POST" action="register.php" style="display: none;">
->>>>>>> tamilselvan:index.html
             <h1 class="modal-title fs-5" id="box-header">SignUp</h1>
             <div class="input-box">
               <input type="text" class="input-field" placeholder="Username" name="username" autocomplete="off" required>
@@ -244,11 +218,7 @@
       </div>
       <div id="modal-body" class="modal-body">
         <!-- Seller registration form -->
-<<<<<<< HEAD:index.php
-        <form id="seller-registration-form" method="POST" action="login/seller_registration.php" style="display: block;">
-=======
         <form id="seller-form" method="POST" action="seller_registration.php" >
->>>>>>> tamilselvan:index.html
           <h1 class="modal-title fs-5" id="box-header">Seller Registration</h1>
           <div class="input-box">
             <input type="text" id="seller-name" class="input-field" placeholder="Seller Name" name="seller_name" required>
@@ -297,17 +267,12 @@
   <!-- Product categories -->
   <div class="product-categories">
     <div class="product-category">
-<<<<<<< HEAD:index.php
-      <img class="img-category" src="./icons/phone.png" width="110px" height="70px">
-      <p class="category cat-mobile"></p>
-=======
       <a href="#" class="link-body-emphasis link-underline-opacity-0">
         <div class="img-category">
       <img src="./icons/index milling.png">
     </div>
     <p class="category-txt">Indexable Milling Tools</p>
     </a>
->>>>>>> tamilselvan:index.html
     </div>
     <div class="product-category">
       <a href="#" class="link-body-emphasis link-underline-opacity-0">
