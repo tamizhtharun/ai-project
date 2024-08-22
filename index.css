@@ -9,7 +9,7 @@
 }
 body{
     /* height: 3000px; */
-    padding-top:120px ;
+    padding-top:160px ;
     background-color: rgb(255, 255, 255);
 }
 body::-webkit-scrollbar {
@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar{
-    height: 80px;
+    height: 65px;
 }
   .nav-item.btns button {
     margin-bottom: 10px;
@@ -49,7 +49,7 @@ body::-webkit-scrollbar-thumb {
       margin-left: 100px;
       /* padding-left: 100px; */
       margin-right: 0px;
-  
+      text-decoration: none !important;
   }
   .search-container {
     margin-left: 180px;
@@ -66,7 +66,7 @@ body::-webkit-scrollbar-thumb {
     
     .search-container ion-icon {
       position: absolute;
-      top: 20px;
+      top: 19px;
       transform: translateY(-50%);
       left: 10px;
       color: #555;
@@ -142,21 +142,21 @@ body::-webkit-scrollbar-thumb {
 
 
 .runningtxt{
-    margin-top: 0px;
+    margin-top: 60px;
     height: 30px;
     width: 100%;
-    /* background-color: rgb(241, 240, 240); */
-    color: rgb(0, 0, 0);
+    background-color: rgb(245, 245, 245);
     align-items: center;
     text-align: center;
 }
 .runningtxt marquee{
   margin-top: 2px;
+  color: rgb(68, 68, 68);
 }
 .menu-bar{
   /* position: absolute; */
     background-color: rgba(206, 206, 206, 0.5); /* transparent white background */
-    height: 35px;
+    height: 30px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -165,13 +165,24 @@ body::-webkit-scrollbar-thumb {
     padding-right: 300px;
     backdrop-filter: blur(10px); /* blur effect */
     margin-bottom: 10px;
-    top: 80px;
+    /* top: 80px; */
+}
+.dropdown-item {
+  color: #767676;
+}
+.dropdown-item:active {
+  /* color: white; */
+  background-color: rgb(255, 255, 255) !important;
+}
+.dropdown-item:hover {
+  text-decoration: none;
+  color: #000000;
 }
 
 .nav-link{
     color: #636363;
-    font-size: 15px;
-    margin-top: -2px;
+    font-size: 14px;
+    margin-top: -3px;
 }
 .nav-link:hover{
     color: #000000;
@@ -184,7 +195,7 @@ body::-webkit-scrollbar-thumb {
 
 .quote-container{
     color: #5f5959;
-    padding-top: 30px;
+    padding-top: 15px;
     /* position: absolute; */
     align-items: center;
     display: flex;
@@ -194,8 +205,9 @@ body::-webkit-scrollbar-thumb {
     transition: transform 0.3s;
 }
 .quote-container:hover{
+  /* transform: rotateY(360deg); */
     transform: scale(1.1);
-    transition: 0.3s;
+    transition: .5s;
 }
 
 .quote-bold{
@@ -212,22 +224,53 @@ body::-webkit-scrollbar-thumb {
 }
 
 .product-categories{
-    padding-top: 30px;
-    justify-content: center;
-    display: flex;
-    text-align: center;
+  padding-top: 15px;
+  justify-content: center;
+  display: flex;
 }
 .product-category{
-    transition: transform 0.3s;
-    padding: 40px;
-}
-.product-category:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
+  /* position: relative; */
+padding: 30px;
+transition: transform 0.3s;
+display: flex; /* add this */
+flex-direction: column; /* add this */
+align-items: center; /* add this */
 }
 
-.category-txt{
-    font-weight: 500;
+.product-category a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.img-category {
+  /* position: relative; */
+width: 100px;
+height: 100px;
+/* background-color: #000; */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.img-category img {
+max-width: 100%;
+max-height: 100%;
+display: block;
+margin: 0 auto;
+}
+.product-category:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.category-txt {
+  /* position: inherit; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  text-align: center;
 }
 
 /* login, signup, seller */
@@ -439,4 +482,74 @@ section a{
 /* banner */
 .banner{
     margin-top: 10px;
+}
+
+/* trending products */
+
+.swiper{
+  /* background-color: #000; */
+  margin-top: 50px;
+}
+.swiper-title{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #282828;
+}
+.slider-wrapper {
+  /* background-color: #04fe8e; */
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+  height: 460px;
+  /* height: auto; */
+  user-select: none;
+  /* padding: 35px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  border-radius: 15px;
+  /* backdrop-filter: blur(30px); */
+  background: #c800ff;
+  border: 1px solid #ffffff80;
+  overflow: hidden;
+}
+
+.slider-wrapper .swiper-slide-button {
+  color: #a7a7a7;
+  margin-top: -55px;
+  transition: 0.5s;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+  color: #2f2f2f;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 20px 40px;
+    padding: 0 30px;
+  }
+}
+
+.card-img{
+  position: relative;
+  margin-top: 15px;
+  /* top: 0; */
+  /* padding: 0px; */
+  height: 220px;
+  width: 280px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #000; */
+}
+.card-img img {
+  max-width: 100%; /* make the image take the full width of the div */
+  max-height: 100%; /* make the image take the full height of the div */
+  object-fit: contain; /* scale the image to fit within the div */
 }
