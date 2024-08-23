@@ -1,5 +1,6 @@
 <?php
-include('../../../Database/dbcon.php');
+// include('../../../Database/dbcon.php');
+$connection = mysqli_connect("localhost","root","","consultancy_project");
 
 
 if (isset($_POST['submit'])) {
@@ -13,16 +14,17 @@ if (isset($_POST['submit'])) {
     $query = "INSERT INTO category (CATEGORY_NAME,CATEGORY_IMAGE,CATEGORY_DATE) 
               VALUES ('$category_name', '$category_image','$category_date')";
     echo"Category added successfully";
-    if ($connection->query($query) === TRUE) {
+    if ($connection->query($query) == TRUE) {
         // Send notification to admin (this could be an email, or an entry in an admin dashboard)
         // In this case, we just display a message for simplicity
         echo '<script>
         alert("New category added."); 
+        window.location.href ="categories.php";
         </script>';
     } else {
         echo '<script>
         alert("Something Occured");
-        window.location.href ="./categories.php";  
+        window.location.href ="categories.php";  
         </script>';
         $connection->error;
     }
