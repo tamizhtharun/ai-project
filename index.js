@@ -340,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }); 
     // DOMContentLoaded  end
 
-
+//swiper live bidding
  const swiper = new Swiper('.slider-wrapper', {
       loop: true,
       grabCursor: true,
@@ -386,3 +386,20 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       }
     });
+    //timer
+    // Set the end time for the bid (in milliseconds)
+const bidEndTime = new Date('2024-08-23T14:30:00.000Z').getTime();
+
+// Update the time every second
+setInterval(function() {
+  const currentTime = new Date().getTime();
+  const timeDiff = bidEndTime - currentTime;
+  
+  // Calculate the time difference in hours, minutes, and seconds
+  const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+  
+  // Update the time display
+  document.getElementById('bid-ends-in-time').innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+}, 1000);

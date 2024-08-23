@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: '-apple-system', 'BlinkMacSystemFont', sans-serif;
+    font-family: 'Roboto', sans-serif;
     user-select: none;
 }
 body{
@@ -495,7 +495,20 @@ section a{
   font-size: 40px;
   font-weight: 600;
   color: #282828;
+  animation: pulse 1.5s infinite;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .slider-wrapper {
   /* background-color: #04fe8e; */
   overflow: hidden;
@@ -507,26 +520,31 @@ section a{
   height: 460px;
   /* height: auto; */
   user-select: none;
-  /* padding: 35px; */
+  /* padding-left: 25px; */
+  /* padding-right: 25px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
   border-radius: 15px;
   /* backdrop-filter: blur(30px); */
-  background: #c800ff;
+  background: #dadada;
   border: 1px solid #ffffff80;
   overflow: hidden;
 }
 
 .slider-wrapper .swiper-slide-button {
   color: #a7a7a7;
-  margin-top: -55px;
+  /* margin-top: -55px; */
   transition: 0.5s;
 }
 
 .slider-wrapper .swiper-slide-button:hover {
   color: #2f2f2f;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #2f2f2f;
 }
 
 @media (max-width: 768px) {
@@ -549,7 +567,73 @@ section a{
   /* background-color: #000; */
 }
 .card-img img {
-  max-width: 100%; /* make the image take the full width of the div */
-  max-height: 100%; /* make the image take the full height of the div */
-  object-fit: contain; /* scale the image to fit within the div */
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: contain;
 }
+
+.live-bidding-details{
+  width: 100%;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.live-bidding-product-title {
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+}
+  .live-bidding-product-title h2{
+  font-size: 35px;
+  font-weight: 600;
+  /* padding-left: 25px; */
+  }
+  .price-section{
+    /* background-color: blue; */
+    /* padding-left: 25px; */
+    width: 100%;
+    display: flex;
+    height:35px;
+  }
+  .actual-price{
+    font-size: 25px;
+    font-weight: 700;
+    /* background-color: wheat; */
+  }
+  .price-strikethrough{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: line-through;
+  }
+  .live-bidding-price{
+    /* padding-left: 25px; */
+    /* background-color: red; */
+    width: 100%;
+    height: 30px;
+  }
+  .live-bidding-price-text{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .available-stock{
+    /* background-color: green; */
+    width: 100%;
+    height: 30px;
+  }
+  .available-stock-text{
+    font-size: 25px;
+  }
+  .bid-ends-in{
+    /* background-color: yellow; */
+    width: 100%;
+    height: 30px;
+    padding-top: 5px;
+  }
+  .bid-ends-in-text{
+    font-size: 20px;
+    color: red;
+    font-weight: 700;
+  }
