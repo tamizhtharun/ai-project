@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeadStock | Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="products.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">   
+        <nav id="nav-bar-head" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./icons/dead stock.png" alt="Logo" width="30" height="30">
+                Dead Stock
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse page-head" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item search-form" id="navbarSupportedContent">
+                    <form class="d-flex" role="search">
+                      <div class="search-container">
+                        <ion-icon class="search-outline" name="search-outline" type="submit" size="small"
+                          style="padding: 5px;"></ion-icon>
+                        <input id="form-control-me-2" class="form-control me-2" type="search" placeholder="Search"
+                          aria-label="Search">
+                      </div>
+                    </form>
+    
+    
+    
+                  </li>
+                  <li class="nav-item btns">
+                    <button id="seller-btn" type="button" class="seller-btn btn btn-outline-secondary">
+                      Sell here!
+                    </button>
+                    <button type="button" id="login-btn" class="login-btn btn btn-outline-secondary"
+                      data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      Login
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    
+      <!-- runningtxt -->
+    <div class="runningtxt">
+        <marquee id="marquee" onmouseover="this.stop();" onmouseout="this.start();">
+        </marquee>
+      </div>
+    
+    <!-- menu bar -->
+    <nav class="navbar  menu-bar">
+		<li class="nav-item dropdown">
+		   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Indexable Milling Tools</a>
+		    <ul class="dropdown-menu">
+			  <li><a class="dropdown-item" href="#"> Milling Inserts & Grades</a></li>
+			  <li><a class="dropdown-item" href="#"> Shoulder Milling </a></li>
+			  <li><a class="dropdown-item" href="#"> High Feed Milling </a></li>
+			  <li><a class="dropdown-item" href="#">Face Milling</a></li>
+			  <li><a class="dropdown-item" href="#"> Copy Milling </a></li>
+			  <li><a class="dropdown-item" href="#"> Engraving / Chamfering </a></li>
+			  <li><a class="dropdown-item" href="#"> Helical Milling </a></li>
+			  <li><a class="dropdown-item" href="#"> Disc Milling </a></li>
+		    </ul>
+		</li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Solid Carbide Endmills</a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">G450 Series</a></li>
+               <li><a class="dropdown-item" href="#">G550 Series</a></li>
+               <li><a class="dropdown-item" href="#">V470 Series</a></li>
+               <li><a class="dropdown-item" href="#">H65X Series</a></li>
+               <li><a class="dropdown-item" href="#">H68X Series</a></li>
+               <li><a class="dropdown-item" href="#">H70X Series</a></li>
+               <li><a class="dropdown-item" href="#">M50X Series</a></li>
+               <li><a class="dropdown-item" href="#">V47X Series</a></li>
+               <li><a class="dropdown-item" href="#">V53X Series</a></li>
+               <li><a class="dropdown-item" href="#">A100 Series</a></li>
+               <li><a class="dropdown-item" href="#">A200 Series</a></li>
+               <li><a class="dropdown-item" href="#">A300 Series</a></li>
+               <li><a class="dropdown-item" href="#">S910 Series</a></li>
+               <li><a class="dropdown-item" href="#">S920 Series</a></li>
+               <li><a class="dropdown-item" href="#">S930 Series</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Turning Tools</a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">Parting & Grooving Tools</a></li>
+               <li><a class="dropdown-item" href="#">Turning Inserts</a></li>
+               <li><a class="dropdown-item" href="#">Turning Tool Holders</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Holemaking Tools  </a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">Solid Carbide Drills</a></li>
+               <li><a class="dropdown-item" href="#">Indexable Drilling</a></li>
+               <li><a class="dropdown-item" href="#">Solid Carbide Reamers</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Threading Tools </a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#"> Thread Turning Tools</a></li>
+               <li><a class="dropdown-item" href="#"> Thread Milling Tools - Carbide Thread Mills </a></li>
+               <li><a class="dropdown-item" href="#"> Thread Tapping Tools - Carbide Taps </a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Others  </a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+             </ul>
+         </li>
+   <!-- navbar-collapse.// -->
+</nav>
+    
+      </div>
+
+<!-- modal -->
+  <!-- login modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Dead Stock</h1>
+          <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body">
+          <!-- Sign In Form -->
+          <form id="signin-form" method="POST" action="login.php">
+            <h1 class="modal-title fs-5" id="box-header">Login</h1>
+            <div class="input-box">
+              <input type="email" id="mail" class="input-field" placeholder="Email" name="email" autocomplete="off"
+                required>
+              <p id="email-error"></p>
+            </div>
+            <div class="input-box">
+              <input type="password" class="input-field" placeholder="Password" name="password" autocomplete="off"
+                required>
+
+            </div>
+            <div class="forgot" id="forgot-password-link">
+              <!-- <section>
+                <input type="checkbox" id="check">
+                <label for="check">Remember me</label>
+              </section> -->
+              <section>
+                <a href="#">Forgot password ?</a>
+              </section>
+            </div>
+            <div class="input-submit">
+              <button class="submit-btn" id="signin-btn" name="login">
+                <label for="submit">Sign In</label>
+              </button>
+            </div>
+            <div class="sign-up-link">
+              <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+            </div>
+          </form>
+
+          <!-- Sign Up Form -->
+          <form id="signup-form" method="POST" action="register.php" style="display: none;">
+            <h1 class="modal-title fs-5" id="box-header">SignUp</h1>
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Username" name="username" autocomplete="off" required>
+            </div>
+            <div class="input-box">
+              <input type="tel" id="phone-number" class="input-field" placeholder="Phone" name="phone_number"
+                autocomplete="off" required pattern="[0-9]{10}">
+              <p id="error-message"></p>
+            </div>
+            <div class="input-box">
+              <input type="email" id="email" class="input-field" placeholder="Email" name="email" autocomplete="off"
+                required>
+              <p id="email-error-message"></p>
+            </div>
+            <div class="input-box">
+              <input id="password" type="password" class="input-field" placeholder="Password" name="password" autocomplete="off"
+                required >
+                <p id="password-error"></p>
+            </div>
+            <div class="input-submit">
+              <button class="submit-btn" id="signup-btn" name="register">
+                <label for="submit">Sign Up</label>
+              </button>
+            </div>
+            <div class="sign-in-link">
+              <p>Already have an account? <a href="#" id="signin-link">Sign In</a></p>
+            </div>
+          </form>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- seller modal -->
+  <div class="modal fade" id="seller-registration-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Dead Stock</h1>
+        <button type="button" id="btn-close" class="seller-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Seller registration form -->
+        <form id="seller-form" method="POST" action="seller_registration.php" >
+          <h1 class="modal-title fs-5" id="box-header">Seller Registration</h1>
+          <div class="input-box">
+            <input type="text" id="seller-name" class="input-field" placeholder="Seller Name" name="seller_name" required>
+          </div>
+
+          <div class="input-box">
+            <input type="text" id="address" class="input-field" placeholder="Address" name="seller_address" required>
+          </div>
+
+          <div class="input-box">
+            <input type="tel" id="seller-phone" class="input-field" placeholder="Phone Number" name="seller_phone" required>
+            <p id="sellerphoneError"></p>  
+          </div>
+
+          <div class="input-box">
+            <input type="email" id="seller-email" class="input-field" placeholder="Email" name="seller_email" required>
+            <p id="sellerEmailError"></p>
+          </div>
+
+            <div class="input-box">
+              <input type="password" id="seller-password" class="input-field" placeholder="Password" name="seller_password" required>
+              <p id="seller-password-error"></p>
+            </div>
+
+          <div class="input-submit">
+            <button class="submit-btn" id="seller-register" name="seller_register">
+              <label for="seller-register">Register</label>
+            </button>
+          </div>
+          <div class="sign-in-link">
+            <p>Already a Seller?<a href="#" id="loginlink" data-bs-target="#staticBackdrop" data-bs-toggle="modal"> Sign In</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="product-page">  
+
+      <!-- filter-container -->
+       <div class="filter-container">
+            <p>Hello</p>
+       </div>
+
+
+
+      <!-- products list  -->
+    <div class="products-list">
+      <!-- card1 -->
+      <div class="card mb-3">
+        <div class="row g-0  product-card">
+          <div class="col-md-4 img-container">
+            <img src="../icons/others.png" class="img-fluid rounded-start" alt="product image here">
+          </div>
+          <div class="col-md-8 product-details">
+            <div class="card-body">
+              <h5 class="card-title product-name">Product Name</h5>
+              <p class="card-text product-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <div class="price">
+            <p>₹<span class="product-price">1,000</span></p>
+            <p class="price-strikethrough">₹2,500</p>
+            </div>
+            <div class="available-stock">
+              <p class="">Available Stock : </p>
+              <p class="available-stock-count">100</p>
+          </div>
+          <div class="product-buy-btn">
+            <button class="buy-btn" type="button">
+            Buy Now
+            </button>
+          </button>
+            <button class="bid-btn" type="button">
+            Start Bidding
+          </button>
+          </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- card2 -->
+      <div class="card mb-3">
+        <div class="row g-0  product-card">
+          <div class="col-md-4 img-container">
+            <img src="../icons/others.png" class="img-fluid rounded-start" alt="product image here">
+          </div>
+          <div class="col-md-8 product-details">
+            <div class="card-body">
+              <h5 class="card-title product-name">Product Name</h5>
+              <p class="card-text product-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <div class="price">
+            <p>₹<span class="product-price">1,000</span></p>
+            <p class="price-strikethrough">₹2,500</p>
+            </div>
+            <div class="available-stock">
+              <p class="">Available Stock : </p>
+              <p class="available-stock-count">100</p>
+          </div>
+          <div class="product-buy-btn">
+            <button class="buy-btn" type="button">
+            Buy Now
+            </button>
+          </button>
+            <button class="bid-btn" type="button">
+            Start Bidding
+          </button>
+          </div>
+            </div>
+        </div>
+      </div>      
+
+      <div class="card mb-3">
+        <div class="row g-0  product-card">
+          <div class="col-md-4 img-container">
+            <img src="../icons/others.png" class="img-fluid rounded-start" alt="product image here">
+          </div>
+          <div class="col-md-8 product-details">
+            <div class="card-body">
+              <h5 class="card-title product-name">Product Name</h5>
+              <p class="card-text product-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <div class="price">
+            <p>₹<span class="product-price">1,000</span></p>
+            <p class="price-strikethrough">₹2,500</p>
+            </div>
+            <div class="available-stock">
+              <p class="">Available Stock : </p>
+              <p class="available-stock-count">100</p>
+          </div>
+          <div class="product-buy-btn">
+            <button class="buy-btn" type="button">
+            Buy Now
+            </button>
+          </button>
+            <button class="bid-btn" type="button">
+            Start Bidding
+          </button>
+          </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row g-0  product-card">
+          <div class="col-md-4 img-container">
+            <img src="../icons/others.png" class="img-fluid rounded-start" alt="product image here">
+          </div>
+          <div class="col-md-8 product-details">
+            <div class="card-body">
+              <h5 class="card-title product-name">Product Name</h5>
+              <p class="card-text product-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <div class="price">
+            <p>₹<span class="product-price">1,000</span></p>
+            <p class="price-strikethrough">₹2,500</p>
+            </div>
+            <div class="available-stock">
+              <p class="">Available Stock : </p>
+              <p class="available-stock-count">100</p>
+          </div>
+          <div class="product-buy-btn">
+            <button class="buy-btn" type="button">
+            Buy Now
+            </button>
+          </button>
+            <button class="bid-btn" type="button">
+            Start Bidding
+          </button>
+          </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row g-0  product-card">
+          <div class="col-md-4 img-container">
+            <img src="../icons/others.png" class="img-fluid rounded-start" alt="product image here">
+          </div>
+          <div class="col-md-8 product-details">
+            <div class="card-body">
+              <h5 class="card-title product-name">Product Name</h5>
+              <p class="card-text product-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <div class="price">
+            <p>₹<span class="product-price">1,000</span></p>
+            <p class="price-strikethrough">₹2,500</p>
+            </div>
+            <div class="available-stock">
+              <p class="">Available Stock : </p>
+              <p class="available-stock-count">100</p>
+          </div>
+          <div class="product-buy-btn">
+            <button class="buy-btn" type="button">
+            Buy Now
+            </button>
+          </button>
+            <button class="bid-btn" type="button">
+            Start Bidding
+          </button>
+          </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row g-0  product-card">
+          <div class="col-md-4 img-container">
+            <img src="../icons/others.png" class="img-fluid rounded-start" alt="product image here">
+          </div>
+          <div class="col-md-8 product-details">
+            <div class="card-body">
+              <h5 class="card-title product-name">Product Name</h5>
+              <p class="card-text product-description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="price-container">
+            <div class="price">
+            <p>₹<span class="product-price">1,000</span></p>
+            <p class="price-strikethrough">₹2,500</p>
+            </div>
+            <div class="available-stock">
+              <p class="">Available Stock : </p>
+              <p class="available-stock-count">100</p>
+          </div>
+          <div class="product-buy-btn">
+            <button class="buy-btn" type="button">
+            Buy Now
+            </button>
+          </button>
+            <button class="bid-btn" type="button">
+            Start Bidding
+          </button>
+          </div>
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="products.js"></script>
+<script src="../index.js"></script>
+</body>
+</html>
