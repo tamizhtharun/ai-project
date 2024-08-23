@@ -362,3 +362,6 @@ th {
   color: #888;
   margin-top: 10px;
 }
+td {
+  text-align: center;
+}
