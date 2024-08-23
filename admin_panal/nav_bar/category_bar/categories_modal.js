@@ -19,7 +19,7 @@ newUserBtn.addEventListener('click', ()=> {
     submitBtn.innerText = 'Submit',
     modalTitle.innerText = "Add Attribute"
     isEdit = false
-    imgInput.src = "download.png"
+    imgInput.src = "../../images/add_image.png"
     form.reset()
 })
 
