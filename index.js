@@ -135,7 +135,7 @@ signupLink.addEventListener('click' , () =>{
 Inputemail.style.marginBottom = '1px'
 
 
-
+//running txt
 
 const marquee = document.getElementById('marquee');
 
@@ -354,10 +354,10 @@ document.addEventListener("DOMContentLoaded", function(){
       },
 
   // Autoplay
-  // autoplay: {
-  //   delay: 3000, // delay between slides in milliseconds
-  //   disableOnInteraction: false, // disable autoplay when user interacts with the slider
-  // },
+  autoplay: {
+    delay: 3000, // delay between slides in milliseconds
+    disableOnInteraction: false, // disable autoplay when user interacts with the slider
+  },
 
       // Pagination
       pagination: {
