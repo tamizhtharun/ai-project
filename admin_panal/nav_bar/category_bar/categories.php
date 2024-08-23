@@ -1,32 +1,192 @@
-<?php
-include('../../../Database/dbcon.php');
-// $connection = mysqli_connect("localhost","root","","consultancy_project");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="categories.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
-if (isset($_POST['submit'])) {
-    $category_name = $_POST['category_name'];
-    $category_image = $_POST['category_image'];
-    $category_date = $_POST['category_date'];
-    // $banner_image = $_POST['banner_image'];
-    // $updates = $_POST['updates'];
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <!--Bootstrap 5 icons CDN-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <title>Dashboard</title>
+</head>
+<body>
+    <!-- top-header -->
+    <div class="top-header">
+      <div class="left-section">
+        <p>LOGO</p>
+      </div>
+      <div class="right-section">
+        <button type="button" class="btn btn-primary">Buy now</button>
+      </div>
+    </div>
+    <!-- End-top-Header -->
 
 
-    $query = "INSERT INTO category (CATEGORY_NAME,CATEGORY_IMAGE,CATEGORY_DATE) 
-              VALUES ('$category_name', '$category_image','$category_date')";
-    echo"Category added successfully";
-    if ($connection->query($query) == TRUE) {
-        // Send notification to admin (this could be an email, or an entry in an admin dashboard)
-        // In this case, we just display a message for simplicity
-        echo '<script>
-        alert("New category added."); 
-        window.location.href ="categories.html";
-        </script>';
-    } else {
-        echo '<script>
-        alert("Something Occured");
-        window.location.href ="categories.html";  
-        </script>';
-        $connection->error;
-    }
-}
-?>
+    <!-- Side-Nav-Bar -->
+    <div class=" container1 ">
+      <!-- <div class="row"> -->
+          <div class=" sidebar">
+              <div class="sidebar-heading">
+                  Admin
+              </div>
+              <ul class="nav flex-column">
+                  <li class="nav-item">
+                      <a class="nav-link" href="../../admin.html">Home</a>
+                  </li>    
+                  <li class="nav-item">
+                      <a class="nav-link" href="../dashboard.html">Dashboard</a>
+                   </li>
+                <li>
+                      <!-- <ul class="nav flex-column ml-3"> -->
+                          <!-- <li class="nav-item"><a class="nav-link" href="/over">Overview</a></li> -->
+                          <li class="nav-item">
+                              <a class="nav-link" href="orders.html">Orders</a>
+                              <!-- <ul class="nav flex-column ml-3"> -->
+                                  <li class="nav-item"><a class="nav-link" href="./categories.html">Categories</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="processed.html">Processed</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="shipped.html">Shipped</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="returned.html">Returned</a></li>
+                              <!-- </ul> -->
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="updates.html">Updates</a></li>
+                          <li class="nav-item"><a class="nav-link" href="report.html">Reports</a></li>
+                      <!-- </ul> -->
+                  </li>
+                 
+                  <li class="nav-item">
+                      <a class="nav-link" href="account.html">Account</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  <!-- </div> -->
+  <!-- End Side-Nav-Bar -->
+
+  <div class="test2" >
+    
+    <section class="p-3">    
+          <div class="addproductcategories">
+                
+                <div class="Add-Attribute">
+                    <h3>Add Attribute</h3>
+                </div>
+        
+                    <div class="wg-box ">
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- <button type="button" class="btn btn-outline-primary newUser" data-bs-toggle="modal" data-bs-target="#userForm">Add New</i></button> -->
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="product-adding">
+                            <table class="list-out-cateory-table   table-hover mt-3 text-center table-bordered " id="productList">
+                                    <thead>
+                                      <tr>
+                                        <th class="s-no">S.No</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    include "../../../Database/dbcon.php";
+
+                                    $query = "SELECT CATEGORY_ID,CATEGORY_NAME,CATEGORY_IMAGE,CATEGORY_DATE FROM category";
+                                    $result = $connection->query($query);
+                                    if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                ?>
+                                      <tr>
+                                        <td><?php echo $row['CATEGORY_ID']; ?></td>
+                                        <td><?php echo $row['CATEGORY_IMAGE']; ?></td>
+                                        <td><?php echo $row['CATEGORY_NAME']; ?></td>
+                                        <td><?php echo $row['CATEGORY_DATE']; ?></td>
+                                        <td>
+                                            <button class="btn btn-primary edit-btn" type="button"  data-bs-toggle="modal" data-bs-target="#userForm">Edit</button>
+                                            <!-- <button class="btn btn-danger delete-btn">Delete</button> -->
+                                          <!-- <button class="edit-btn">Edit</button>
+                                          <button class="delete-btn">Delete</button> -->
+                                        </td>
+                                      </tr>
+                                      <?php       
+                                            }  
+                                      }
+                                       ?>
+                                      
+                                    </tbody>                                
+                                <tbody id="data"></tbody>
+                            </table>
+                            <!-- <div id="productNotAdded" class="product-not-added">
+                                There is no product 
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+    </section>
+</div>  
+
+    
+    <!--Modal Form-->
+    <div class="modal fade modal02" id="userForm">
+        <div class="modal-dialog modal-dialog-centered modal">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Attribute</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form action="./create.php" method="post" id="myForm">
+
+                        <div class=" imgholder">
+                            <label for="imgInput" class="upload">
+                                <input type="file" name="category_image" id="imgInput">
+                                <i class="bi bi-plus-circle-dotted"></i>
+                            </label>
+                            <img src="../../images/add_image.png" alt="" width="200" height="200" class="img">
+                        </div>
+
+                        <div class="inputField">
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" name="category_name" id="name" required>
+                            </div>
+                            <div>
+                                <label for="sDate">Date:</label>
+                                <input type="date" name="category_date" id="sDate" abled>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" form="myForm" class="btn btn-primary submit" name="submit">Submit</button>
+                            </div>                        
+                          </div>
+
+                    </form>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="categories_modal.js"></script>
+
+</body>
+</html>
+
+
