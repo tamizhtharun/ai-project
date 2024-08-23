@@ -1,6 +1,6 @@
 <?php
-// include('../../../Database/dbcon.php');
-$connection = mysqli_connect("localhost","root","","consultancy_project");
+include('../../../Database/dbcon.php');
+// $connection = mysqli_connect("localhost","root","","consultancy_project");
 
 
 if (isset($_POST['submit'])) {
@@ -19,12 +19,12 @@ if (isset($_POST['submit'])) {
         // In this case, we just display a message for simplicity
         echo '<script>
         alert("New category added."); 
-        window.location.href ="categories.php";
+        window.location.href ="categories.html";
         </script>';
     } else {
         echo '<script>
         alert("Something Occured");
-        window.location.href ="categories.php";  
+        window.location.href ="categories.html";  
         </script>';
         $connection->error;
     }
