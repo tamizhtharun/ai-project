@@ -93,7 +93,7 @@
                                     <thead>
                                       <tr>
                                         <th class="s-no">S.No</th>
-                                        <th>Category</th>
+                                        <th>Image</th>
                                         <th>Name</th>
                                         <th>Date</th>
                                         <th>Actions</th>
@@ -106,7 +106,7 @@
                                         <td>Name 1</td>
                                         <td>2023-02-20</td>
                                         <td>
-                                            <button class="btn btn-primary edit-btn">Edit</button>
+                                            <button class="btn btn-primary edit-btn" type="button"  data-bs-toggle="modal" data-bs-target="#userForm">Edit</button>
                                             <!-- <button class="btn btn-danger delete-btn">Delete</button> -->
                                           <!-- <button class="edit-btn">Edit</button>
                                           <button class="delete-btn">Delete</button> -->
@@ -118,7 +118,7 @@
                                         <td>Name 2</td>
                                         <td>2023-02-21</td>
                                         <td>
-                                            <button class="btn btn-primary edit-btn">Edit</button>
+                                            <button class="btn btn-primary edit-btn"  type="button"  data-bs-toggle="modal" data-bs-target="#userForm">Edit</button>
                                             <!-- <button class="btn btn-danger delete-btn">Delete</button> -->
                                           <!-- <button class="edit-btn">Edit</button>
                                           <button class="delete-btn">Delete</button> -->
@@ -130,7 +130,7 @@
                                         <td>Name 3</td>
                                         <td>2023-02-22</td>
                                         <td>
-                                            <button class="btn btn-primary edit-btn">Edit</button>
+                                            <button class="btn btn-primary edit-btn"  type="button"  data-bs-toggle="modal" data-bs-target="#userForm">Edit</button>
                                             <!-- <button class="btn btn-danger delete-btn">Delete</button> -->
                                           <!-- <button class="edit-btn">Edit</button>
                                           <button class="delete-btn">Delete</button> -->
@@ -142,7 +142,7 @@
                                         <td>Name 4</td>
                                         <td>2023-02-23</td>
                                         <td>
-                                            <button class="btn btn-primary edit-btn">Edit</button>
+                                            <button class="btn btn-primary edit-btn"  type="button"  data-bs-toggle="modal" data-bs-target="#userForm">Edit</button>
                                             <!-- <button class="btn btn-danger delete-btn">Delete</button> -->
                                           <!-- <button class="edit-btn">Edit</button>
                                           <button class="delete-btn">Delete</button> -->
@@ -154,7 +154,7 @@
                                         <td>Name 5</td>
                                         <td>2023-02-24</td>
                                         <td>
-                                            <button class="btn btn-primary edit-btn">Edit</button>
+                                            <button class="btn btn-primary edit-btn"  type="button"  data-bs-toggle="modal" data-bs-target="#userForm">Edit</button>
                                             <!-- <button class="btn btn-danger delete-btn">Delete</button> -->
                                           <!-- <button class="edit-btn">Edit</button>
                                           <button class="delete-btn">Delete</button> -->
@@ -166,7 +166,7 @@
                                         <td>Name 6</td>
                                         <td>2023-02-25</td>
                                         <td>
-                                            <button class="btn btn-primary edit-btn">Edit</button>
+                                            <button class="btn btn-primary edit-btn"  type="button"  data-bs-toggle="modal" data-bs-target="#userForm">Edit</button>
                                             <!-- <button class="btn btn-danger delete-btn">Delete</button> -->
                                           <!-- <button class="edit-btn">Edit</button>
                                           <button class="delete-btn">Delete</button> -->
@@ -201,7 +201,7 @@
 
                         <div class=" imgholder">
                             <label for="imgInput" class="upload">
-                                <input type="file" name="Category_image" id="imgInput">
+                                <input type="file" name="category_image" id="imgInput">
                                 <i class="bi bi-plus-circle-dotted"></i>
                             </label>
                             <img src="download.png" alt="" width="200" height="200" class="img">
@@ -210,16 +210,17 @@
                         <div class="inputField">
                             <div>
                                 <label for="name">Name:</label>
-                                <input type="text" name="Category_name" id="name" required>
+                                <input type="text" name="category_name" id="name" required>
                             </div>
                             <div>
                                 <label for="sDate">Date:</label>
-                                <input type="date" name="Category_date" id="sDate" abled>
+                                <input type="date" name="category_date" id="sDate" abled>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" form="myForm" class="btn btn-primary submit" name="Submit">Submit</button>
-                            </div>                        </div>
+                                <button type="submit" form="myForm" class="btn btn-primary submit" name="submit">Submit</button>
+                            </div>                        
+                          </div>
 
                     </form>
                 </div>
