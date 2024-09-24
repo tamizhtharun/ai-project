@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    user-select: none;
+    /* user-select: none; */
 }
 body{
     /* height: 3000px; */
@@ -571,4 +571,19 @@ color: #000;
 }
 .bid-btn{
   margin-top: 15px !important;
+}
+
+.price-range-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-range-inputs input {
+  width: 45%;
+  margin: 0 10px;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
 }
