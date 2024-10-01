@@ -163,7 +163,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     padding-left: 300px;
     padding-right: 300px;
-    backdrop-filter: blur(10px); /* blur effect */
+    backdrop-filter: blur(10px); 
     margin-bottom: 10px;
     /* top: 80px; */
 }
@@ -178,6 +178,29 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   color: #000000;
 }
+.sub-dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+ .sub-dropdown-menu {
+  display: block;
+}
+
+.sub-dropdown-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sub-dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
 
 .nav-link{
     color: #636363;
@@ -512,7 +535,7 @@ section a{
 .slider-wrapper {
   /* background-color: #04fe8e; */
   overflow: hidden;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 70px 55px;
 }
 
@@ -637,3 +660,71 @@ section a{
     color: red;
     font-weight: 700;
   }
+
+
+  .cat-title{
+  margin: 10px;
+  font-size: 35px;
+  font-weight: 500;
+}
+  .cat-product-list{
+    background-color: rgb(242, 242, 242);
+    height: 300px;
+    padding-top: 10px;
+    /* justify-content: center; */
+    /* display: flex; */
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    /* -webkit-overflow-scrolling: touch; */
+    }
+    .cat-product-list-card{
+      /* display: flex; */
+      background-color: rgb(255, 255, 255);
+      width: 200px;
+      padding: 10px;
+      align-items: center;
+      /* text-align: center; */
+      justify-content: center;
+      height: 260px;
+      border-radius: 10px;
+      margin: 10px;
+      flex: 0 0 auto;
+    }
+    .cat-product-img{
+      /* align-items: center;
+      justify-items: center;
+      justify-content: space-around; */
+      text-align: center;
+      padding-top: 10px;
+    }
+    .product-card-lower{
+      /* background-color: blanchedalmond; */
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      /* text-align: center; */
+
+    }
+    .cat-product-title{
+      padding-top: 30px;
+      font-size: 15px;
+    }
+    .cat-product-price{
+      padding: 0;
+      font-size: larger;
+      font-weight: 700;
+    }
+    .price-strike{
+      text-decoration: line-through;
+      color: #777777;
+      display: flex;
+    }
+    .cat-product-original-price{
+      display: flex;
+    }
+    .cat-product-discount{
+      padding-left: 10px;
+      color: rgb(0, 189, 0);
+      font-weight: 500;
+    }

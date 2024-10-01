@@ -403,3 +403,34 @@ setInterval(function() {
   // Update the time display
   document.getElementById('bid-ends-in-time').innerHTML = `${hours}h ${minutes}m ${seconds}s`;
 }, 1000);
+
+
+$('.dropdown-item').hover(function() {
+  $(this).find('.sub-dropdown-menu').slideDown();
+}, function() {
+  $(this).find('.sub-dropdown-menu').slideUp();
+});
+
+const catswiper = new Swiper('.swiper', {
+  // Optional configuration
+  slidesPerView: 3,
+  spaceBetween: 10,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+catswiper.on('touchStart', (event) => {
+  // Handle touch start event
+});
+
+catswiper.on('touchMove', (event) => {
+  // Handle touch move event
+});
+
+catswiper.on('touchEnd', (event) => {
+  // Handle touch end event
+});
