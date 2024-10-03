@@ -662,22 +662,12 @@ section a{
   }
 
 
-  .cat-title{
-  margin: 10px;
-  font-size: 35px;
-  font-weight: 500;
-}
-  .cat-product-list{
-    background-color: rgb(242, 242, 242);
-    height: 300px;
-    padding-top: 10px;
-    /* justify-content: center; */
-    /* display: flex; */
-    border-radius: 10px;
-    margin: 10px;
-    overflow: hidden;
-    /* -webkit-overflow-scrolling: touch; */
-    }
+  
+   
+  
+
+    /* Category*/
+
     .cat-product-list-card{
       /* display: flex; */
       background-color: rgb(255, 255, 255);
@@ -688,8 +678,10 @@ section a{
       justify-content: center;
       height: 260px;
       border-radius: 10px;
-      margin: 10px;
+      margin-bottom: 10px;
+      margin-top: 5px;
       flex: 0 0 auto;
+      box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
     }
     .cat-product-img{
       /* align-items: center;
@@ -728,3 +720,87 @@ section a{
       color: rgb(0, 189, 0);
       font-weight: 500;
     }
+    .cat-title{
+      font-size: 20px;
+      padding-left: 30px;
+      font-weight: 500;
+    }
+
+    .wrapper {
+      /* max-width: 1100px; */
+      /* width: 100%; */
+      /* position: relative; */
+      /* background-color: #e7e7e7; */
+      /* height: 300px; */
+      /* margin: 10px; */
+      margin-top: 60px;
+      /* background-color: green; */
+  
+  }
+  .carousel{
+    margin-top: 20px;
+  }
+  
+
+  
+  .wrapper i:first-child {
+      left: -0px;
+  
+  }
+  
+  .wrapper i:last-child {
+      right: -50px !important;
+  
+  }
+  
+  .wrapper .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% / 7) - 15px);
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: 0;
+  }
+  
+  .carousel::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .carousel :where(.card, .img) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .carousel.dragging {
+      scroll-snap-type: none;
+      scroll-behavior: auto;
+  }
+  
+  .carousel.no-transition {
+      scroll-behavior: auto;
+  }
+  
+  .carousel.dragging .card {
+      cursor: grab;
+      user-select: none;
+  }
+
+
+  
+  
+  @media screen and (max-width: 900px) {
+      .wrapper .carousel {
+          grid-auto-columns: calc((100% / 4) - 9px);
+  
+      }
+  }
+  
+  @media screen and (max-width: 600px) {
+      .wrapper .carousel {
+          grid-auto-columns: 100%;
+  
+      }
+  }

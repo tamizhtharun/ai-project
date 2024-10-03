@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // DOMContentLoaded  end
 
 //swiper live bidding
- const swiper = new Swiper('.slider-wrapper', {
+ var swiper = new Swiper('.slider-wrapper', {
       loop: true,
       grabCursor: true,
       spaceBetween: 30,
@@ -411,26 +411,34 @@ $('.dropdown-item').hover(function() {
   $(this).find('.sub-dropdown-menu').slideUp();
 });
 
-const catswiper = new Swiper('.swiper', {
-  // Optional configuration
-  slidesPerView: 3,
-  spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-catswiper.on('touchStart', (event) => {
-  // Handle touch start event
+//category
+let carouselIndex = 0;
+const carouselItems = document.querySelectorAll('.carousel');
+const carouselLength = carouselItems.length;
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+prevBtn.addEventListener('click', () => {
+  carouselIndex--;
+  if (carouselIndex < 0) {
+    carouselIndex = carouselLength - 1;
+  }
+  updateCarousel();
 });
 
-catswiper.on('touchMove', (event) => {
-  // Handle touch move event
+nextBtn.addEventListener('click', () => {
+  carouselIndex++;
+  if (carouselIndex >= carouselLength) {
+    carouselIndex = 0;
+  }
+  updateCarousel();
 });
 
-catswiper.on('touchEnd', (event) => {
-  // Handle touch end event
-});
+function updateCarousel() {
+  carouselItems.forEach((item, index) => {
+    item.style.display = 'none';
+    if (index === carouselIndex) {
+      item.style.display = 'block';
+    }
+  });
+}
