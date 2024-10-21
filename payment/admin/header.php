@@ -118,7 +118,7 @@ if(!isset($_SESSION['user'])) {
                             <li><a href="shipping-cost.php"><i class="fa fa-circle-o"></i> Shipping Cost</a></li>
                             <li><a href="top-category.php"><i class="fa fa-circle-o"></i> Top Level Category</a></li>
                             <li><a href="mid-category.php"><i class="fa fa-circle-o"></i> Mid Level Category</a></li>
-                            <!-- <li><a href="end-category.php"><i class="fa fa-circle-o"></i> End Level Category</a></li> -->
+                            <li><a href="end-category.php"><i class="fa fa-circle-o"></i> End Level Category</a></li>
                         </ul>
                     </li>
 
